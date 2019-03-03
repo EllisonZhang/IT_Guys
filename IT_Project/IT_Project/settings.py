@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'WeGame',
+    'registration' # add in the registration package
 ]
 
 MIDDLEWARE = [
