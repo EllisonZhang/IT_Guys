@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'wegame/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+	About
+{% endblock %}
+
+
+{% block body_block %}
+		<h1>About</h1>
+		<h4>Thank you very much for visiting our website! We are just 4 students from Glasgow University hoping to receive an A1 on this project ;)</h4>
+		<div>
+			<img src="{{ MEDIA_URL}}cat.jpg" alt="development team says hi" />
+			<br>
+		</div>
+{% endblock %}
