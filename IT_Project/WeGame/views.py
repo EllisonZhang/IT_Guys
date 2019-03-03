@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    response = render(request, 'wegame/index.html')
+    response = render(request, 'wegame/home.html')
     return response
 
 def about(request):
