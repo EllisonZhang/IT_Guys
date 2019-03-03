@@ -1,10 +1,30 @@
 <!DOCTYPE html>
+{% load staticfiles %}
+
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>WeGame</title>
+        <title>Rango
+            Rango -
+            {%block title_block%}
+                How to Tango with Django!
+            {%endblock%}
+        </title> 
     </head>
     <body>
-        <p>This is home page.</p>
-    </body>
+        <div>
+            {% block sidebar_block %}
+                
+            {% endblock %}
+        </div>
+        <div>
+            {%block body_block%}
+            {%endblock%}
+        </div>     
+        <hr/>
+        <div>
+            <ul>
+
+            </ul>
+        </div>>
+    </body> 
 </html>

@@ -18,6 +18,6 @@ def logout(request):
     return response
 
 def register(request):
-    response = render(request, 'wegame/register.html')
+    response = render(request, 'registration/registration.html')
     return response
 
