@@ -1,9 +1,67 @@
-{% extends "WeGame/base.html" %}
-{% block body_block %}
-    <h1>Register Here</h1>
-    <form method="post" action=".">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit" />
-    </form> 
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href = "/static/style.css">
+        <title>Registration</title>
+    </head>
+
+    <body>
+        <div class = frame>
+        <div class = infor_container>
+            <h1>Registration</h1>
+            <div class = socialAPP>
+                <form class = socialAPI method = "POST">
+                        <button id = facebook>
+                                <span>Facebook</span>
+                            </button> 
+                </form>
+                <form class = socialAPI method = "POST">
+                        <button id = facebook>
+                                <span>Instegram</span>
+                        </button> 
+                </form>
+                
+            </div>
+        </div>
+
+
+
+        <div class = form_container>
+            <form id = "registerForm" method = "POST" action = "#">
+                    <div class="form-group">
+                        <fieldset class = name_fieldset>
+                            <div class = name_div>
+                                <input type="text" placeholder="First Name" class ="name_input"/>
+                            </div>
+                            <div class = name_div>
+                                <input type="text" placeholder="Last Name" class ="name_input"/>
+                            </div>
+                        </fieldset> 
+
+                        <fieldset class = name_fieldset>
+                            <div class = normal_form>
+                                <input type="text" placeholder="E-mail Address" class ="E-mail_input"/>
+                            </div>
+                        </fieldset> 
+
+                        <fieldset class = name_fieldset>
+                                <div class = normal_form>
+                                        <input type="text" placeholder="Password" class ="E-mail_input"/>
+                                    </div>
+                        </fieldset> 
+                        <fieldset class = name_fieldset>
+                                <div class = normal_form>
+                                        <input type="text" placeholder="Confirm Password" class ="E-mail_input"/>
+                                    </div>
+                        </fieldset>
+                    </div>
+                    <div class="submission">
+                        <button id = "create_account">
+                            <span class = "button_text">Create an account</span>
+                        </button>
+                    </div>
+            </form>
+        </div>
+        </div>
+    </body> 
+</html>

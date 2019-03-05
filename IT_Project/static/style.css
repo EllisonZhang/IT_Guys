@@ -1,0 +1,65 @@
+.form_container {
+    
+}
+.infor_container{
+    margin: 20px;
+}
+
+body { 
+    background-image: url(/static/Minecraft.jpg); 
+}
+
+h1{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+}
+.socialAPP{
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
+    max-width: 500px;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+
+}
+.name_div{
+    float: left;
+    width: 50%;
+
+}
+.normal_form{
+    float: left;
+    width: 100%;
+}
+
+
+.name_fieldset{
+    border-width: 0px;
+}
+.name_input{
+    width: 95%;
+    height: 28px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.E-mail_input{
+    width: 98%;
+    height: 28px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.submission{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#create_account{
+    width: 93%;
+    height: 30px;
+    margin-left: 10px;
+}
