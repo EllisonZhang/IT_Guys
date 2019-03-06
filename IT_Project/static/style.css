@@ -9,9 +9,6 @@ html{
     background: url(/static/registration.jpg) no-repeat center fixed; 
     background-size: cover;
 }
-body { 
-    /* background-image: url(/static/registration.jpg);  */
-}
 
 h1{
     font-size: 35px;
@@ -98,7 +95,9 @@ p{
     margin-right: auto;
     margin-bottom: 20px;
     margin-left: auto;
-
+}
+.loginframe{
+    max-width: 400px;
 }
 .name_div{
     float: left;
@@ -176,4 +175,52 @@ button#create_account:hover {
 
 .sign_in{
     margin-top: 10px;
+}
+.break_line{
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.break_line_text{
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #4a4646;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.break_line_text::before{
+    content:"";
+    background-color: #9a9696;
+    width: 145px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-right: 20px;
+}
+.break_line_text::after{
+    content: "";
+    background-color: #9a9696;
+    width: 140px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 20px;
+}
+#signup{
+    color: #ffe7c7;
+    text-decoration: none;
+    margin-right: 30px;
+}
+#signup:hover{
+    color: white;
+}
+#signupList{
+    text-align: center;
+    list-style-type: none;
 }
