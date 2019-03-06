@@ -1,22 +1,94 @@
-.form_container {
-    
-}
 .infor_container{
-    margin: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 
+html{
+    background: url(/static/registration.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
 body { 
-    background-image: url(/static/Minecraft.jpg); 
+    /* background-image: url(/static/registration.jpg);  */
 }
 
 h1{
-    font-size: 30px;
-    color:white;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #424040;
     text-align: center;
+    margin-bottom: 60px;
 }
+p{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #2d2c2c;
+}
+
 .socialAPP{
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
+}
+.socialAPI{
+    width: 250px;
+    height: 35px;
+}
+
+.icon_fb{
+    position: relative;
+    margin-left: 30px;
+}
+
+.icon_fb::before{
+    background: url(/static/Facebook_icon.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    left: -40px;
+    top: -5px;
+}
+.icon_google{
+    position: relative;
+    margin-left: 30px;
+}
+
+.icon_google::before{
+    background: url(/static/Google_icon.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    left: -40px;
+    top: -5px;
+}
+#facebook{
+    width: 90%;
+    margin-left: 10px;
+    height: 30px;
+    background-color:#cedee0;
+    border-color: #aaad9e;
+    cursor: pointer;
+}
+#facebook:hover{
+    background-color:#dbecf1;
+}
+#google{
+    width: 90%;
+    height: 30px;
+    background-color:#cedee0;
+    border-color: #aaad9e;
+    cursor: pointer;
+}
+#google:hover{
+    background-color:#dbecf1;
 }
 
 .frame {
@@ -44,22 +116,64 @@ h1{
 }
 .name_input{
     width: 95%;
-    height: 28px;
+    height: 35px;
     padding-left: 15px;
     box-sizing: border-box;
+    border-radius: 3px;
+    border-width: 1px;
+    margin-bottom: 8px;
 }
+.name_input:hover { 
+    border-color: gray;
+}
+
+.birthday{
+    width: 32%;
+    margin-right: 6.3px;
+    float:left;
+}
+.select-box{
+    height: 35px;
+    width: 140px;
+    color: #757575;
+}
+.select-box:hover { 
+    border-color: gray;
+}
+
 .E-mail_input{
     width: 98%;
-    height: 28px;
+    height: 35px;
     padding-left: 15px;
     box-sizing: border-box;
+    border-radius: 3px;
+    border-width: 1px;
+}
+.E-mail_input:hover{
+    border-color: gray;
 }
 .submission{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 4px;
+    height: 35px;
 }
 #create_account{
-    width: 93%;
+    width: 94%;
     height: 30px;
     margin-left: 10px;
+    height: 35px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+button#create_account:hover {
+    background-color:white;
+    border-color: gray;
+}
+.button_text{
+    font-size: 15px;
+}
+
+.sign_in{
+    margin-top: 10px;
 }
