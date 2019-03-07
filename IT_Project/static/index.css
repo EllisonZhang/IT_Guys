@@ -1,0 +1,74 @@
+html{
+    background: url(/static/main-background.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
+.logo{
+
+    display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    width: 100px;
+    content: "";
+    background: url(/static/we-logo.png) no-repeat;
+    background-size: contain;
+}
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.nav-bar-container{
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.1);
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: visible;
+    position: relative;
+    height: 60px;
+    padding: 0 30px;
+    white-space: nowrap;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-bar-items{
+    width: 340px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: top;
+}
+.nav-bar-label{
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+}
+.nav-bar-label:hover {
+    color: rgb(230, 223, 223);
+}
+
+/* the links */
+.nav-bar-item{
+    text-transform: uppercase;
+    margin-right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255,1);
+    font-family: cursive;
+    text-decoration: none;
+}
+
+.nav-bar-account{
+    margin-left: 400px;
+    width: 180px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 700px;
+}
+.bottom{
+    height: 300px;
+    margin-top: 500px;
+    margin-left: 150px;
+}
