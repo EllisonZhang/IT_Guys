@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>WeGame</title>
     <link rel = "stylesheet" href="/static/index.css">
-    <script src="/static/homeScript.js"></script>
+    
   </head>
 
   <body>
@@ -49,16 +49,16 @@
 
   <!--  page -->
   <!-- Container for the image gallery -->
-  <div class="popular-game-container">
+  <div class="slide-show-container">
 
     <!-- Full-width images with number text -->
-    <div class="mySlides">
+    <div class="mySlides fade">
         <img src="/static/game1.jpg" style="width:100%">
     </div>
-    <div class="mySlides">
+    <div class="mySlides fade">
         <img src="/static/Minecraft.jpg" style="width:100%">
     </div>
-    <div class="mySlides">
+    <div class="mySlides fade">
         <img src="/static/game2.jpg" style="width:100%">
     </div>
   
@@ -66,11 +66,11 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
     <!-- The dots/circles -->
-    <div style="text-align:center">
+    <div class="dot-container ">
       <span class="dot" onclick="currentSlide(1)"></span> 
       <span class="dot" onclick="currentSlide(2)"></span> 
       <span class="dot" onclick="currentSlide(3)"></span> 
-    </div> -->
+    </div> 
 
   </div>
 
@@ -96,4 +96,5 @@
   </div>
 
   </body>
+  <script src="/static/homeScript.js"></script>
 </html>
