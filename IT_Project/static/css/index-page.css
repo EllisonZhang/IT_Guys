@@ -27,7 +27,7 @@
 }
 
 /* make the story card bigger when hover */
-.story-card{ 
+.dynamic-zoom-in{ 
     transition: all .5s ease;
     
 }
@@ -67,4 +67,31 @@
 }
 .story10{
     background: url(/static/registration.jpg)
+}
+
+/* **************  scroll manue  *************** */
+.scroll-card{
+    display:inline-block;
+    width: 33%;
+    box-sizing: border-box;
+    margin:10px;
+    /* background: url(/static/registration.jpg); */
+    height: 400px;
+    background-size: 710px auto!important;
+    background-position: 50% 0!important;
+    background-repeat: no-repeat!important;
+    box-shadow: 5px 8px 10px 1px rgba(111, 75, 49, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.scroll-container{
+    overflow: auto;
+    white-space: nowrap;  
+}
+.scroll-card:hover{
+    transform : scale(1.05);
 }
