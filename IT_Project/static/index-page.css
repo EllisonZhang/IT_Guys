@@ -1,3 +1,5 @@
+
+/* display 5 cards each row */
 .story-card{
     width: 18.5%;
     box-sizing: border-box;
@@ -8,7 +10,11 @@
     background-size: 400px auto!important;
     background-position: 50% 0!important;
     background-repeat: no-repeat!important;
+    box-shadow: 5px 8px 10px 1px rgba(111, 75, 49, 0.8);
+    cursor: pointer;
 }
+
+/* display 5 cards each row */
 .story-cards{
     display: flex;
     flex-wrap: wrap;
@@ -18,4 +24,14 @@
 .top-stories-container{
     padding-left: 40px;
     padding-right: 40px;
+}
+
+/* make the story card bigger when hover */
+.story-card{ 
+    transition: all .5s ease;
+    
+}
+.story-card:hover{ 
+    transform: scale(1.05);
+    
 }
