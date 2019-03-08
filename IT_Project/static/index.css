@@ -8,6 +8,16 @@ body{
     margin-right: 0px;
     margin-top: 0px;
 }
+h2{
+    font-family: fantasy;
+    color: #7F0709;
+    /* text-decoration-color: #2f597d; */
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(130, 55, 8, 0.5);
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
 
 /********************* header *****************************/
 /********************* header *****************************/
@@ -184,10 +194,9 @@ body{
     left: 43%;
     top: 95%;
   }
-  
-  
-  
-  
+
+
+
 
 /******* footer ********/
 /******* footer ********/
