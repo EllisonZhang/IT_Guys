@@ -30,25 +30,33 @@ h2{
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: #eeece0f2; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
-.sidenav a {
+.Categories{
+  padding: 8px 8px 0px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #6f4b31;
+  display: block;
+  transition: 0.3s;
+}
+.side-content{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+.Categories:hover {
+  color: #b90707;
 }
 
 /* Position and style the close button (top right corner) */
@@ -58,6 +66,7 @@ h2{
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: #341908;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -71,9 +80,7 @@ h2{
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-.Categories{
-  
-}
+
 
 
 .logo{
@@ -260,9 +267,11 @@ h2{
   background-color: #82543A;
 }
 .logo-bottom{
+  display: inline-block;
   vertical-align: bottom;
-  height: 60px;
+  height: 100px;
   width: 100px;
+  left: 10%;
   content: "";
   background: url(/static/we-logo.png) no-repeat;
   background-size: contain;
@@ -276,15 +285,16 @@ h2{
   color: rgba(255, 255, 255,1);
   font-family: cursive;
   text-decoration: none;
+  bottom: 150px;
 }
 .bottom-bar-items{
   width: 700px;
-  height: 60px;
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
-  bottom: -150px;
-  left: 25%;
+    height: 60px;
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    bottom: -120px;
+    left: 15%;
 }
 .bottom-bar-label{
   display: inline-block;
@@ -294,11 +304,14 @@ h2{
 }
 .test{
   color: rgba(238, 236, 224, 0.5);
-  text-align: justify;
-  position: relative;
-  left: 0px;
-  bottom: 180px;
-  display: inline;
-  font-size: 12px;
+    text-align: justify;
+    position: relative;
+    left: 20px;
+    bottom: 150px;
+    display: inline;
+    font-size: 12px;
+}
+.bottom-bar-label:hover{
+  color: #e66262;
 }
 
