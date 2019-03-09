@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'),
     # url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^logout/$', views.logout, name='logout'),
+    url(r'^games/$', views.games, name='games'),
 ]
