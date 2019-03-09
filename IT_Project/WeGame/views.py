@@ -22,3 +22,6 @@ def register(request):
     response = render(request, 'registration/registration.html')
     return response
 
+def games(request):
+    response = render(request, 'wegame/games.html')
+    return response
