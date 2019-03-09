@@ -3,15 +3,59 @@
 {% load staticfiles %}
 
 {% block title_block %}
-	About
+	About Our Team
 {% endblock %}
 
 
 {% block body_block %}
-		<h1>About</h1>
-		<h4>Thank you very much for visiting our website! We are just 4 students from Glasgow University hoping to receive an A1 on this project ;)</h4>
-		<div>
-			<img src="{{ MEDIA_URL}}cat.jpg" alt="development team says hi" />
-			<br>
-		</div>
+<h2>About Our Team</h2>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/static/team-pic/Edmund Kuras.jpg" alt="Edmund" style="width:100%">
+      <div class="container">
+        <h2>Edmund Kuras</h2>
+        <p class="title">MSc. Software Development</p>
+        <p>2419774k@student.gla.ac.uk</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/static/team-pic/Ellison Zhang.jpg" alt="Ellison" style="width:100%">
+      <div class="container">
+        <h2>Ellison Zhang</h2>
+        <p class="title">MSc. Information Technology</p>
+        <p>hukumasio@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="/static/team-pic/Kevin Kengne.jpg" alt="Kevin" style="width:100%">
+      <div class="container">
+        <h2>Kevin Kengne</h2>
+        <p class="title">MSc. Software Development</p>
+        <p>kevin.kengne1@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      <img src="/static/team-pic/Zexin Cao.jpg" alt="Zexin" style="width:100%">
+      <div class="container">
+        <h2>Zexin Cao</h2>
+        <p class="title">MSc. Computer System Engineering </p>
+        <p>caozexinniubi@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
