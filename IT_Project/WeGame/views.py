@@ -55,8 +55,12 @@ def register(request):
         user_form = UserForm()
         profile_form = UserProfileForm()
 
-    response = render(request, 'registration/registration.html')
-    return response
+    
+    return render(request, 
+                'registration/registration.html', 
+                {'user_form': user_form,
+                  'profile_form': profile_form,
+                  'registered': registered})
 
 def games(request):
     response = render(request, 'wegame/games.html')
