@@ -6,12 +6,6 @@ class Reviews(models.Model):
     game_reviewed = models.ForeignKey('Games', on_delete=models.SET_NULL, null=True)
     user = models.ForeignKey('Users', on_delete=models.SET_NULL, null=True)
 
-
-class Users(models.Model):
-    username = models.CharField(max_length=30)
-    email = models.EmailField(max_length=254)
-    password = models.CharField(max_length=30)
-
 class Games(models.Model):
     category = models.CharField(max_length=30)
     name = models.CharField(max_length=30)

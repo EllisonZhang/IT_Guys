@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def index(request):
     response = render(request, 'wegame/home.html')
@@ -21,3 +22,6 @@ def register(request):
     response = render(request, 'registration/registration.html')
     return response
 
+def games(request):
+    response = render(request, 'wegame/games.html')
+    return response
