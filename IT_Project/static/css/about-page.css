@@ -1,7 +1,7 @@
 /* Four columns side by side */
 .column {
   float: left;
-  width: 100%;
+  width: 25%;
   margin-bottom: 16px;
 	padding: 0 8px;
 }
@@ -19,6 +19,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Hover over image to increase size */
+.card:hover img {
+	-moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
 /* Some left and right padding inside the container */
 .container {
   padding: 0 16px;
@@ -28,7 +35,7 @@
 .container::after, .row::after {
   content: "";
   clear: both;
-  display: flex;
+  display: table;
 }
 
 .title {
