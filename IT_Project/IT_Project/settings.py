@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'WeGame',
-    'registration' # add in the registration package
+    'accounts',
 ]
 
 REGISTRATION_OPEN = True
@@ -36,7 +36,8 @@ ACCOUNT_ACTIVATION_DAYS = 7
 # If True, the user will be automatically logged in.
 REGISTRATION_AUTO_LOGIN = True
 # The page you want users to arrive at after they successfully log in
-LOGIN_REDIRECT_URL = '/WeGame/'
+LOGIN_REDIRECT_URL = '/wegame/'
+LOGOUT_REDIRECT_URL = '/wegame/'
 # The page users are directed to if they are not logged in,
 # and are trying to access pages requiring authentication
 LOGIN_URL = '/accounts/login/'
@@ -89,6 +90,7 @@ DATABASES = {
     }
 }
 
+#AUTH_USER_MODEL = 'accounts.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
