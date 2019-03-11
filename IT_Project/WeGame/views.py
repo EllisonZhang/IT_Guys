@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
+from .models import Game
 
+class GameDetailView(DetailView):
+    model = Game
+    template_name = 'game_detail.html'
 
 # Create your views here.
 def index(request):

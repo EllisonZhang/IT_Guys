@@ -10,5 +10,6 @@ urlpatterns = [
     # url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^logout/$', views.logout, name='logout'),
     url(r'^games/$', views.games, name='games'),
+    url(r'^games/(?P<pk>\d+)/$', views.GameDetailView.as_view(), name='game_detail'),
     url(r'^about/$', views.about, name='about'),
 ]
