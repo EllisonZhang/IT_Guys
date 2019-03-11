@@ -7,6 +7,9 @@
 * {
     box-sizing: border-box;
   }
+  .infor-part{
+    display: flex;
+  }
   
   /* Position the image container (needed to position the left and right arrows) */
   .vedio-section {
@@ -97,8 +100,55 @@
   /* below is the information section on the right of the vedio */
 .infor-section{
     display: inline-block;
-    position: absolute;
-    width: 28%;
-    height: 522px;
+    position: inherit;
+    width: 40%;
     background-color: #6f4b31;
+
+}
+.review-box{
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: rgba(138, 0, 0, 0.8);
+}
+.review-box-left{
+  float: left;
+  display: flex;
+}
+.avatar img{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+}
+.user-name{
+  margin-left: 20px;
+  padding-top: 5px;
+}
+.user-name a{
+  text-decoration: none;
+  color: #A63900;
+}
+
+.review-box-right{
+  float: left;
+  width: 100%;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color:#7f0709;
+}
+.like-dislike{
+  margin-top: 80px;
+  padding-left: 50%;
+}
+.dislike{
+  margin-left: 30%;
+}
+
+
+.content{
+  line-height: 30px;
 }
