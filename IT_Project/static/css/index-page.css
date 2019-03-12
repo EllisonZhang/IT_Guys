@@ -84,6 +84,10 @@
 .story-card:hover.button{
     opacity: 1;
 }
+.story-card:hover{ 
+    transform: scale(1.05);  
+    box-shadow: 10px 14px 14px 4px rgba(111, 75, 49, 0.8);
+}
 
 .story1{
     background: url(/static/home-pic/ARK.jpeg);
@@ -97,7 +101,7 @@
 }
 
 .story4{
-    background: url(/static/home-pic/hearthstone.webp)
+    background: url(/static/home-pic/Hearthstone.jpg)
 }
 .story5{
     background: url(/static/home-pic/overwatch.jpeg);

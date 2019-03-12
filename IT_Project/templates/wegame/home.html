@@ -1,70 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+{% extends 'wegame/base.html' %}
+{% load staticfiles %}
+
+{%block head_block%}
     <title>WeGame</title>
-    <link rel = "stylesheet" href="/static/css/index.css">
     <link rel = "stylesheet" href="/static/css/index-page.css">
-  </head>
+{%endblock%}
 
-  <body>
-    <!-- ----------------------------------header (nav bar)---------------------------------- -->
-      <div class="nav-bar-container">
-        <nav class="nav-bar">
-          <!-- side bar -->
-          <!-- <a class="nav-bar-item" href="home.html"> -->
-            <div class="sidenav" id="mySidenav">
-               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a class = "side-content" href="#">Categories</a>
-                <a class = "side-content Categories" href="#">Indie</a>
-                <a class = "side-content Categories" href="#">Advanture</a>
-                <a class = "side-content Categories" href="#">RPG</a>
-                <a class = "side-content Categories" href="#">MMORPG</a>
-                <a class = "side-content Categories" href="#">Sports</a>
-                <a class = "side-content Categories" href="#">Strategy</a>
-            </div>
-            <div class="nav-bar-label nav-bar-item">
-                <span onclick="openNav()">&#9776;</span>
-            </div>
-            
-          <!-- </a> -->
-          <!-- logo -->
-          <div class="logo">
-              <a class="nav-bar-item" href="home.html">
-              </a>
-          </div>
-
-          <div class="nav-bar-items">
-            <a class="nav-bar-item" href="home.html">
-              <div class="nav-bar-label">WeGame</div>
-            </a>
-            <a class="nav-bar-item" href="home.html">
-              <div class="nav-bar-label">News</div>
-            </a>
-            <a class="nav-bar-item" href="home.html">
-              <div class="nav-bar-label">Forum</div>
-            </a>
-            <a class="nav-bar-item" href="home.html">
-              <div class="nav-bar-label">About</div>
-            </a>
-          </div>
-
-          <div class="nav-bar-account">
-              <a class="nav-bar-item" href="home.html">
-                <div class="nav-bar-label">Support</div>
-              </a>
-              <div class= "dropdown nav-bar-label">
-                  <div class="nav-bar-item drop-background">My account</div>
-                  <div class="dropdown-content">
-                    <a href="http://127.0.0.1:8000/accounts/login/">Sign In</a>
-                    <a href="http://127.0.0.1:8000/accounts/register/">Sign Up</a>
-                  </div>
-                </a>
-              </div>
-          </div>
-        </nav>
-      </div>
-
+{%block body_block%}
   <!--  ---------------------------------- page ---------------------------------- -->
     <!-- Container for the image gallery -->
     <div class="slide-show-container">
@@ -162,41 +104,17 @@
         </div>
 
     </div>
-
+{%endblock%}
   <!-- ----------------------------------footer---------------------------------- -->
-  <div class="bottom">
-      <nav class="bottom-bar">
-        <div class="logo-bottom"></div>
-        <div class="bottom-bar-items">
-        <a class="bottom-bar-item" href="home.html">
-          <div class="bottom-bar-label">SUPPORT</div>
-        </a>
-        <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="home.html">
-          <div class="bottom-bar-label">ABOUT</div>
-        </a>
-        <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="home.html">
-          <div class="bottom-bar-label">CONTACT US</div>
-        </a>
-        <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="home.html">
-          <div class="bottom-bar-label">NEWS</div>
-        </a>
-        <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="home.html">
-            <div class="bottom-bar-label">FEEDBACK</div>
-        </a>
-      <div class="test">
-        <p>@2019 WE ENTERTAINMENT, INC.ALL RIGHTS RESERVED.</p>
-        <p>All trademarks referenced herein are the properties herein are the properties of their respective owners.</p>
-      </div>
-      
-</div>
-  </div>
 
-  </body>
+
+{%block script_block%}
   <script src="/static/js/homeSlideScript.js"></script>
+<<<<<<< HEAD
   <script src="/static/js/sideBar.js"></script>
   <script src="/static/js/homeSlideScript.js"></script>
 </html>
+=======
+
+{%endblock%}
+>>>>>>> 19954c6f276fce12defa7a5217426972e11478a5

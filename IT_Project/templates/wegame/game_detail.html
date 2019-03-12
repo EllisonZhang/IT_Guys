@@ -1,0 +1,180 @@
+{% extends 'wegame/base.html' %}
+{% load staticfiles %}
+
+{%block head_block%}
+    <title>Games</title>
+    <link rel = "stylesheet" href="/static/css/games.css">
+    <link rel = "stylesheet" href="/static/css/index-page.css">
+{%endblock%}
+
+<!-- two parts in total in this page: reviews and videos -->
+
+
+{%block body_block%}
+<div class = "games-page-container">
+
+    <!------------------------------  videos ------------------------------->
+    <div class="game-infor-section">
+        <!-- the title of game -->
+        <div class ="top-stories-title">
+            <h2>{{ game.name }}</h2>
+        </div>
+        <!-- the video of game / on the left -->
+
+        <div class = infor-part>
+        <div class ="vedio-section">
+
+            <!-- Full-width images with number text -->
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">1 / 6</div> -->
+                            <img src="/static/home-pic/ARK.jpeg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">2 / 6</div> -->
+                            <img src="/static/home-pic/EU-truck.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">3 / 6</div> -->
+                            <img src="/static/home-pic/Hearthstone.jpg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">4 / 6</div> -->
+                            <img src="/static/home-pic/overwatch.jpeg" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">5 / 6</div> -->
+                            <img src="/static/home-pic/stardew-valley.png" style="width:100%">
+                        </div>
+                      
+                        <div class="mySlides">
+                          <!-- <div class="numbertext">6 / 6</div> -->
+                            <img src="/static/home-pic/WoW.jpg" style="width:100%">
+                        </div>
+                      
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                 
+                        <!-- Thumbnail images -->
+                        <div class="row">
+                          <div class="column">
+                            <img class="demo cursor" src="/static/home-pic/ARK.jpeg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                          </div>
+                          <div class="column"> 
+                            <img class="demo cursor" src="/static/home-pic/EU-truck.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="/static/home-pic/Hearthstone.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="/static/home-pic/overwatch.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="/static/home-pic/stardew-valley.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                          </div> 
+                          <div class="column">
+                            <img class="demo cursor" src="/static/home-pic/WoW.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                          </div>
+                        </div>
+           
+
+        </div>
+
+        <!-- the content of game / on the right -->
+        <div class ="infor-section">
+            <span>aaaaa</span>>
+        </div>
+      </div>
+    </div>
+    <!------------------------------  reviews ------------------------------->
+
+    <div class="reviews-container">
+        <div class ="top-stories-title">
+          <h2>Reviews</h2>
+        </div>
+
+        <div class="review-box">
+          <!-- left side of the box -->
+          <div class= "review-box-left">
+            <div class ="avatar">
+              <a href="#">
+                <img src="/static/we-logo.jpg">
+              </a>
+            </div>
+            <div class = "user-name">
+              <a href="#">Ellison</a>
+            </div>
+          </div>
+          <!-- right side of the box -->
+          <div class="review-box-right">
+            <div class = "content">
+              <span>A crashy game in need of serious optimization. The game under these issues is great, but man, what a mess of issues it has.</span>
+            </div>
+            <div class = "like-dislike" onclick="">
+              <a href = "#"> 
+                  <i class="fas fa-thumbs-up">  like</i>
+              </a>
+              <a class ="dislike" href = "#"> 
+                  <i class="fas fa-thumbs-down">  dislike</i>
+              </a>
+              
+            </div>
+          </div>
+
+
+        </div>
+        <div class="review-box">
+            <!-- left side of the box -->
+            <div class= "review-box-left">
+              <div class ="avatar">
+                <a href="#">
+                  <img src="/static/we-logo.jpg">
+                </a>
+              </div>
+              <div class = "user-name">
+                <a href="#">Ellison</a>
+              </div>
+            </div>
+            <!-- right side of the box -->
+            <div class="review-box-right">
+              <div class = "content">
+                <span>A crashy game in need of serious optimization. The game under these issues is great, but man, what a mess of issues it has.</span>
+              </div>
+              <div class = "like-dislike" onclick="">
+                <a href = "#"> 
+                    <i class="fas fa-thumbs-up">  like</i>
+                </a>
+                <a class ="dislike" href = "#"> 
+                    <i class="fas fa-thumbs-down">  dislike</i>
+                </a>
+                
+              </div>
+            </div>
+  
+  
+          </div>
+  
+
+    </div>
+
+</div>
+
+{%endblock%}
+
+
+
+{%block script_block%}
+<script src="/static/js/slideInGames.js"></script>
+{%endblock%}
+
+
+
+
+
+
+
