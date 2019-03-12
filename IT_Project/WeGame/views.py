@@ -43,5 +43,5 @@ def about(request):
 
 
 def games(request):
-    response = render(request, 'wegame/games.html')
+    response = render(request, 'wegame/game_detail.html')
     return response

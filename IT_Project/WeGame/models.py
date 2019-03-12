@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Review(models.Model):
     comment_text = models.CharField(max_length=500)
     creation_date = models.DateTimeField(auto_now=True)
@@ -11,7 +12,7 @@ class Game(models.Model):
     name = models.CharField(max_length=30)
     publisher_name = models.ForeignKey('Publisher', on_delete=models.SET_NULL, null=True)
     year_released = models.DateField(max_length=30)
-    
+
     def __str__(self):
         return self.name
 
