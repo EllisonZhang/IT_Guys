@@ -5,7 +5,10 @@ class Review(models.Model):
     comment_text = models.CharField(max_length=500)
     creation_date = models.DateTimeField(auto_now=True)
     game_reviewed = models.ForeignKey('Game', on_delete=models.SET_NULL, null=True)
-    
+    user = models.ForeignKey('accounts.CustomUser', on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.comment_text
 
 class Game(models.Model):
     category = models.CharField(max_length=30)
