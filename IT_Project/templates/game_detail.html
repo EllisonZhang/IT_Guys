@@ -94,11 +94,7 @@
       </div>
     </div>
     <!------------------------------  reviews ------------------------------->
-    <ol>
-      {% for review in review_list %}
-        <li>{{ review.comment_text }}</li>
-      {% endfor %}
-    </ol>
+    
     <div class="reviews-container">
         <div class ="top-stories-title">
           <h2>Reviews</h2>
@@ -109,7 +105,12 @@
           <div class= "review-box-left">
             <div class ="avatar">
               <a href="#">
+                {% if review.user.photo %}
+                <img src="{{ review.user.photo.url }} ">
+                {% else %}
                 <img src="/static/we-logo.jpg">
+                {% endif %}
+                
               </a>
             </div>
             <div class = "user-name">
