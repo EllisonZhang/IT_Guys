@@ -23,7 +23,11 @@
   .mySlides {
     display: none;
   }
-  
+  .mySlides iframe{
+    width: 100%;
+    height: 334px;
+    border-width: 0px;
+  }
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
     cursor: pointer;

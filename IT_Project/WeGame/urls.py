@@ -5,6 +5,10 @@ from WeGame import views
 
 urlpatterns = [
     url(r'^$', views.index, name = 'index'),
+<<<<<<< HEAD
+=======
+    url(r'^game_detail/$', views.games, name='games'),
+>>>>>>> 94fa38bd27b44880158a00d1d2a2adb9d4f708d2
     url(r'^games/(?P<pk>\d+)/$', views.GameDetailView.as_view(), name='game_detail'),
     url(r'^games/reviews/new/$', views.ReviewCreateView.as_view(), name='review_new'),
     url(r'^games/reviews/(?P<pk>\d+)/edit/$', views.ReviewUpdateView.as_view(), name='review_edit'),
