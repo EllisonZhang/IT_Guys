@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body_block %}
+    <h1>Edit review</h1>
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <p><a href="{% url 'review_delete' review.pk %}">+ Delete Review</a></p>
+{% endblock %}

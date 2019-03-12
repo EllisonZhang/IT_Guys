@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block body_block %}
+ <h1>Delete Review</h1>
+ <form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete your review from {{ review.creation_date }} ?</p>
+    <input type="submit" value="confirm">
+ </form>
+{% endblock %}
