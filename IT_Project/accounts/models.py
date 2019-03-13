@@ -4,4 +4,4 @@ from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
     age = models.PositiveIntegerField(default=0)
-    photo = models.ImageField(upload_to='profilePicture')
+    #photo = models.ImageField(upload_to='profilePicture')
