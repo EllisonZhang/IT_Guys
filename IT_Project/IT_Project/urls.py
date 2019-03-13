@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
 from django.conf.urls import include
+from django.conf.urls.static import static
 from WeGame import views
 
 urlpatterns = [
@@ -10,4 +12,4 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^$', views.index, name='index'),
-] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
