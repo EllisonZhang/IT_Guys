@@ -8,7 +8,7 @@ body{
     margin-right: 0px;
     margin-top: 0px;
 }
-h2{
+h1, h2{
     font-family: cursive,fantasy;
     color: #7F0709;
     /* text-decoration-color: #2f597d; */
@@ -19,14 +19,24 @@ h2{
     padding-top: 10px;
 }
 
+/********************* header *****************************/
+/********************* header *****************************/
+
 /********************* style for forms *****************************/
 .styled-form {
+  margin-top: 75px;
   text-align: center;
 }
 
-/********************* header *****************************/
-/********************* header *****************************/
-
+.styled-form input {
+  width: 280px;
+  height: 35px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 8px;
+}
 /* The side navigation menu */
 .sidenav {
   height: 100% !important; /* 100% Full-height */
