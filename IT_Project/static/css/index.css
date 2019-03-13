@@ -19,6 +19,11 @@ h2{
     padding-top: 10px;
 }
 
+/********************* style for forms *****************************/
+.styled-form {
+  text-align: center;
+}
+
 /********************* header *****************************/
 /********************* header *****************************/
 
@@ -206,6 +211,7 @@ h2{
     from {opacity: .4} 
     to {opacity: 1}
   }
+
   /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
