@@ -26,6 +26,11 @@ class ReviewCreateView(CreateView):
         print(pk2)
         return super(ReviewCreateView, self).get(*args, **kwargs)
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(ReviewCreateView, self).form_valid(form)
+
+
 class ReviewUpdateView(UpdateView):
     model = Review
     template_name = 'review_edit.html'
