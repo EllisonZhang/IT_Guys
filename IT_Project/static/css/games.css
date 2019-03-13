@@ -23,7 +23,11 @@
   .mySlides {
     display: none;
   }
-  
+  .mySlides iframe{
+    width: 100%;
+    height: 334px;
+    border-width: 0px;
+  }
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
     cursor: pointer;
@@ -80,11 +84,15 @@
     display: table;
     clear: both;
   }
+  .row{
+    overflow: auto;
+    white-space: nowrap;
+  }
   
   /* Six columns side by side */
   .column {
-    float: left;
-    width: 16.66%;
+    display: inline-block;
+    width: 20%;
   }
   
   /* Add a transparency effect for thumnbail images */
@@ -151,4 +159,8 @@
 
 .content{
   line-height: 30px;
+}
+.subtitle_column{
+  width: 100%;
+  color: #c6d4df;
 }
