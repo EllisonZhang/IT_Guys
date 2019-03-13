@@ -24,12 +24,12 @@ class Game(models.Model):
 
 class Picture(models.Model):
     picture_name = models.CharField(max_length=100)
-    game_name = models.ForeignKey('Game') #on delete??
+    game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True) #on delete??
     picture_path = models.CharField(max_length=100)
 
 class Video(models.Model):
     video_name = models.CharField(max_length=100)
-    game_name = models.ForeignKey('Game')#on delete??
+    game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True)#on delete??
     video_path = models.CharField(max_length=100)
 
 
