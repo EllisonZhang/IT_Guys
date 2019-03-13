@@ -6,6 +6,12 @@ from django.urls import reverse_lazy
 class GameDetailView(DetailView):
     model = Game
     template_name = 'game_detail.html'
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super().get_context_data(**kwargs)
+        # Add in a QuerySet of all the books
+        context['review_list'] = Review.objects.all()
+        return context
     
 
 class ReviewCreateView(CreateView):
@@ -19,6 +25,11 @@ class ReviewCreateView(CreateView):
         print(pk1)
         print(pk2)
         return super(ReviewCreateView, self).get(*args, **kwargs)
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(ReviewCreateView, self).form_valid(form)
+
 
 class ReviewUpdateView(UpdateView):
     model = Review
@@ -42,6 +53,3 @@ def about(request):
     return response
 
 
-def games(request):
-    response = render(request, 'wegame/game_detail.html')
-    return response

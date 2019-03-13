@@ -1,9 +1,24 @@
 {% extends 'base.html' %}
+{%block head_block%}
+<link rel="stylesheet" href="/static/css/account.css">
+{%endblock%}
 {% block body_block %}
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<div class="styled-form">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="create_account">Log in to WeGame</button>
+    </form>
+</div>
+<script>
+    var placeHolders = document.getElementsByTagName("label");
+    for (i = 0; i < placeHolders.length; i++) {
+            placeHolders[i].style.display = 'none';
+            var input = placeHolders[i].nextElementSibling;
+            var text = placeHolders[i].innerHTML
+            console.log(text);
+            input["placeholder"] = text;
+    }
+</script>
 {% endblock %}

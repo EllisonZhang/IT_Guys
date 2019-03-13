@@ -5,6 +5,18 @@
     margin-right: 5px;
 }
 
+
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input:hover {
+    border-color: gray;
+}
+
 html{
     background: url(/static/registration.jpg) no-repeat center fixed; 
     background-size: cover;
@@ -13,7 +25,6 @@ html{
 h1{
     font-size: 35px;
     font-family: sans-serif;
-    color: #424040;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -157,15 +168,16 @@ p{
     margin-left: 4px;
     height: 35px;
 }
-#create_account{
-    width: 94%;
+.create_account{
+    width: 290px;
+    border-radius: 5px;
     height: 30px;
     margin-left: 10px;
     height: 35px;
     padding-left: 12px;
     cursor: pointer;
 }
-button#create_account:hover {
+button.create_account:hover {
     background-color:white;
     border-color: gray;
 }

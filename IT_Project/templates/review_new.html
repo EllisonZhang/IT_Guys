@@ -1,8 +1,20 @@
 {% extends 'base.html'%}
 {% block body_block %}
+<div class="styled-form">
     <h1>New review</h1>
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Save" />
     </form>
+</div>
+<script>
+        var placeHolders = document.getElementsByTagName("label");
+        for (i = 0; i < placeHolders.length; i++) {
+                placeHolders[i].style.display = 'none';
+                var input = placeHolders[i].nextElementSibling;
+                var text = placeHolders[i].innerHTML
+                console.log(text);
+                input["placeholder"] = text;
+        }
+</script>
 {% endblock %}

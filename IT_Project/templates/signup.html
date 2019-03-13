@@ -1,9 +1,41 @@
 {% extends 'base.html' %}
+{%block head_block%}
+<link rel="stylesheet" href="/static/css/account.css">
+{%endblock%}
+
 {% block body_block %}
-<h2>Sign up</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-</form>
+<div class="styled-form">
+    <h2>Sign up</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="create_account">Create an account</button>
+       
+    </form>
+</div>
+<script>
+    // Hide default unecessary text from django form
+    var passwordMessage = document.getElementsByTagName("UL")[0];
+    var helpText = document.getElementsByClassName("helptext");
+    l = helpText.length
+    passwordMessage.style.display = 'none';
+    for (i = 0; i < l; i++) {
+        helpText[i].style.display = 'none';
+    }
+    // replace labels with placeholder text
+    var placeHolders = document.getElementsByTagName("label");
+    for (i = 0; i < placeHolders.length; i++) {
+        if (placeHolders[i].innerHTML != "Photo:") {
+            placeHolders[i].style.display = 'none';
+            var input = placeHolders[i].nextElementSibling;
+            var text = placeHolders[i].innerHTML
+            console.log(text);
+            input["placeholder"] = text;
+        } else {
+            placeHolders[i].innerHTML = "Upload a profile picture:";
+        }
+        
+    }
+</script>
 {% endblock%}

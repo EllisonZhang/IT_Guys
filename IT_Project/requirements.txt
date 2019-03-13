@@ -1,4 +1,12 @@
+bcrypt==3.1.6
 certifi==2018.11.29
+<<<<<<< HEAD
+=======
+cffi==1.12.2
+Django==1.11.17
+>>>>>>> b5d21417c007d7fdbb1e2ef34a16629bcea15ac8
 django-registration-redux==1.4
 Pillow==5.4.1
+pycparser==2.19
 pytz==2018.9
+six==1.12.0
