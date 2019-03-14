@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {%block head_block%}
 <link rel="stylesheet" href="/static/css/account.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 {%endblock%}
 
 {% block body_block %}
@@ -30,7 +31,6 @@
             placeHolders[i].style.display = 'none';
             var input = placeHolders[i].nextElementSibling;
             var text = placeHolders[i].innerHTML
-            console.log(text);
             input["placeholder"] = text;
         } else {
             placeHolders[i].innerHTML = "Upload a profile picture:";
