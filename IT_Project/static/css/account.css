@@ -240,3 +240,14 @@ button.create_account:hover {
     text-align: center;
     list-style-type: none;
 }
+
+.second-option a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.second-option a:hover {
+    color: #7F0709;
+    
+}

@@ -23,12 +23,8 @@ class Game(models.Model):
         return self.name
 
 class Picture(models.Model):
-<<<<<<< HEAD
-    game_name = models.ForeignKey('Game',on_delete=models.SET_NULL, null=True) #on delete??
-=======
     picture_name = models.CharField(max_length=100)
     game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True) #on delete??
->>>>>>> b5d21417c007d7fdbb1e2ef34a16629bcea15ac8
     picture_path = models.CharField(max_length=100)
 
     def __str__(self):
