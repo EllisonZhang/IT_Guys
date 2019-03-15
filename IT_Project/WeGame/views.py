@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
 from .models import Game, Review
 from django.urls import reverse_lazy
+from newsapi import NewsApiClient
 
 class GameDetailView(DetailView):
     model = Game
@@ -52,4 +53,10 @@ def about(request):
     response = render(request, 'wegame/about.html')
     return response
 
+def news(request):
+    newsapi = NewsApiClient(api_key='7184697691164311aaca455ed36c0b68')
+    top_headlines = newsapi.get_top_headlines(sources='ign')
+    return render(request, 'wegame/news.html', {
+        'articles':top_headlines['articles']
+    })
 

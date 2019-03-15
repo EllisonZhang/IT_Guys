@@ -1,0 +1,22 @@
+{% extends 'wegame/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+  <link rel = "stylesheet" href="/static/css/news.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
+{% endblock %}
+{%block body_block%}
+<div id="container">
+
+
+{% for article in articles %}
+<div class="news-article">
+    <div><img src="{{ article.urlToImage }}" alt=""></div>
+    <div class="news-article-text">
+        <h3>{{ article.title}}</h3>
+        <p>{{ article.description }}</p>
+    </div>
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}
