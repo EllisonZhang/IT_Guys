@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^games/reviews/(?P<pk>\d+)/edit/$', views.ReviewUpdateView.as_view(), name='review_edit'),
     url(r'^games/reviews/(?P<pk>\d+)/delete/$', views.ReviewDeleteView.as_view(), name='review_delete'),
     url(r'^about/$', views.about, name='about'),
+    url(r'^news/$', views.news, name='news'),
     
 ]

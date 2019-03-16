@@ -41,7 +41,11 @@
       <!-- cards part -->
       <div class="story-cards">
         <div class = "story-card dynamic-zoom-in story1">
-
+            <div class="over">
+              <a href="#" class="icon" title="User Profile">
+              </a>
+            </div>
+          <!-- <img src = "/static/home-pic/ARK.jpeg" alt="picture lost" class = "image"> -->
         </div>
         <div class = "story-card dynamic-zoom-in story2">
 
@@ -82,26 +86,14 @@
         <div class ="top-stories-title">
           <h2>Latest News</h2>
         </div>
-
         <div class="scroll-container">
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
+        {% for article in articles %}
+        <div class="scroll-card dynamic-zoom-in">
+          <img src="{{ article.urlToImage}} " alt="" width="200">
+          <p><a href="{{ article.url }}" target="_blank">{{ article.title}}</a><p>
         </div>
-
-    </div>
+        
+        {% endfor %}       
 {%endblock%}
   <!-- ----------------------------------footer---------------------------------- -->
 

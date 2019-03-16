@@ -3,13 +3,16 @@ html{
     background-size: cover;
     background-color: #EEECE0;
 }
+
+* {
+  font-family: 'Pacifico', sans-serif;
+}
 body{
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
 }
 h1, h2{
-    font-family: cursive,fantasy;
     color: #7F0709;
     /* text-decoration-color: #2f597d; */
     border-bottom-width: 2px;
@@ -96,8 +99,6 @@ h1, h2{
   .sidenav a {font-size: 18px;}
 }
 
-
-
 .logo{
   display: inline-block;
   vertical-align: top;
@@ -147,7 +148,6 @@ h1, h2{
     margin-right: 20px;
     cursor: pointer;
     color: rgba(255, 255, 255,1);
-    font-family: cursive;
     text-decoration: none;
 }
 
