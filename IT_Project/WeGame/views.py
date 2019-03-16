@@ -46,8 +46,12 @@ class ReviewDeleteView(DeleteView):
 
 # Create your views here.
 def index(request):
-    response = render(request, 'wegame/home.html')
-    return response
+    newsapi = NewsApiClient(api_key='7184697691164311aaca455ed36c0b68')
+    top_headlines = newsapi.get_top_headlines(sources='ign')
+    
+    return render(request, 'wegame/home.html', {
+        'articles':top_headlines['articles']
+    })
 
 def about(request):
     response = render(request, 'wegame/about.html')
