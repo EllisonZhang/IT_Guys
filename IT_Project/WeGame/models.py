@@ -6,7 +6,7 @@ class Review(models.Model):
     number_dislikes = models.IntegerField(default = 0)
     comment_text = models.CharField(max_length=500)
     creation_date = models.DateTimeField(auto_now=True)
-    game_reviewed = models.ForeignKey('Game', on_delete=models.SET_NULL, null=True)
+    game_reviewed = models.CharField(max_length=30)
     user = models.ForeignKey('accounts.CustomUser', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
@@ -23,19 +23,18 @@ class Game(models.Model):
         return self.name
 
 class Picture(models.Model):
-    game_name = models.ForeignKey('Game', on_delete=models.SET_NULL, null=True) #on delete??
+    game_name = models.CharField(max_length=30)
     picture_path = models.CharField(max_length=100)
 
     def __str__(self):
         return self.game_name
 
 class Video(models.Model):
-    video_name = models.CharField(max_length=100)
-    game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True)#on delete??
+    game_name = models.CharField(max_length=30)
     video_path = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.video_name
+        return self.game_name
 
 
 class Publisher(models.Model):
