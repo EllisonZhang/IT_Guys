@@ -12,7 +12,7 @@
 <div class="news-article">
     <div><img src="{{ article.urlToImage }}" alt=""></div>
     <div class="news-article-text">
-        <h3>{{ article.title}}</h3>
+        <h3><a href="{{ article.url }}" target="_blank">{{ article.title}}</a></h3>
         <p>{{ article.description }}</p>
     </div>
 </div>
