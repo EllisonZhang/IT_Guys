@@ -187,7 +187,9 @@ h1, h2{
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color:rgba(33, 30, 30, 0.5);}
 
-
+@viewport {
+  width: device-width;
+}
 
 /*********************************** page **************************/
 /*********************************** page **************************/
