@@ -86,17 +86,20 @@
         </div>
         <div class="scroll-container">
         {% for article in articles %}
-        <div class="scroll-card dynamic-zoom-in">
-          <img src="{{ article.urlToImage}} " alt="" width="200">
-          <p><a href="{{ article.url }}" target="_blank">{{ article.title}}</a><p>
-        </div>
+        <a href="{{article.url}}" target="_blank">
+          <div class="card">
+            <img src="{{ article.urlToImage}}" alt="Avatar" style="width:100%" height="196.88">
+            <div class="card-container">
+              
+              <p>{{ article.title }}</p> 
+            </div>
+          </div>
+        </a>
         
-        {% endfor %}       
+        
+        {% endfor %}
+        </div>  
 {%endblock%}
-  <!-- ----------------------------------footer---------------------------------- -->
-
-
 {%block script_block%}
   <script src="/static/js/homeSlideScript.js"></script>
-
 {%endblock%}

@@ -1,4 +1,6 @@
-
+a {
+    text-decoration: none;
+}
 /* display 5 cards each row */
 .story-card{
     width: 18.5%;
@@ -143,9 +145,40 @@
     text-decoration: none;
 }
 .scroll-container{
+    width: 80%;
     overflow: auto;
     white-space: nowrap;  
+    display: flex;
 }
 .scroll-card:hover{
     transform : scale(1.05);
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    max-width: 350px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px; /* 5px rounded corners */
+    transition: 0.3s;
+    color: #A63900;
+    background-color:white;
+    height: 350px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    width: 350px;
+    padding: 2px 16px;
+    white-space: pre-line;
+    
+  }
+  
+img {
+    border-radius: 5px 5px 0 0;
 }
