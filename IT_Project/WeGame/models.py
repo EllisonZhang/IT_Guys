@@ -27,10 +27,16 @@ class Picture(models.Model):
     game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True) #on delete??
     picture_path = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.game_name
+
 class Video(models.Model):
     video_name = models.CharField(max_length=100)
     game_name = models.ForeignKey('Game',  on_delete=models.SET_NULL, null=True)#on delete??
     video_path = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.video_name
 
 
 class Publisher(models.Model):
@@ -45,3 +51,6 @@ class News(models.Model):
     news_content = models.TextField(null = True,default="")
     news_data = models.DateField(max_length=30)
     editor_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.news_title
