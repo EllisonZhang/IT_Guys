@@ -1,6 +1,8 @@
-{% extends 'base.html' %}
+{% extends '../wegame/base.html' %}
+{% load staticfiles %}
 {%block head_block%}
 <link rel="stylesheet" href="/static/css/account.css">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 {%endblock%}
 {% block body_block %}
 <div class="styled-form">
@@ -9,6 +11,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="create_account">Log in to WeGame</button>
+        <p class="second-option"><a href="/accounts/signup/">Create a free WeGame account</a></p>
     </form>
 </div>
 <script>

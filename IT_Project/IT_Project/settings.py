@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'WeGame',
     'accounts',
+    'social_django'
 ]
 
 REGISTRATION_OPEN = True
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware'
 ]
 
 PASSWORD_HASHERS = [
@@ -73,7 +75,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media'
+                'django.template.context_processors.media',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect', # <--
             ],
         },
     },
@@ -91,6 +95,15 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Login with twitter, facebook or github
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
@@ -139,4 +152,5 @@ STATICFILES_DIRS = [STATIC_DIR,]
 STATIC_URL = '/static/'
 
 
-
+SOCIAL_AUTH_GITHUB_KEY = '4a27cb9cceb28ccb7c63'
+SOCIAL_AUTH_GITHUB_SECRET = '4224f9e58eb46507fb0f815c1a6fd942809a5777'

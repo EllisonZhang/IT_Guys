@@ -1,0 +1,41 @@
+#container {
+    width: 80%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-article {
+    padding-top: 20px;
+    display: flex;
+    border-top:1px dotted #7F0709;
+    
+}
+
+.news-article img {
+    width: 200px;
+}
+
+.news-article-text {
+    margin-left: 20px;
+
+}
+
+.news-article-text h3 {
+    color: #7F0709;
+    font-family: 'Exo', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-article-text p {
+    color: #A63900;
+    font-family: 'Exo', sans-serif;
+}
+
+
+

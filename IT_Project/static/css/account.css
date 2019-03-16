@@ -11,6 +11,7 @@ label {
     font-size: 14px;
     display: block;
     margin-bottom: 10px;
+    color: #7F0709;
 }
 
 input:hover {
@@ -24,17 +25,17 @@ html{
 
 h1{
     font-size: 35px;
-    font-family: sans-serif;
     text-align: center;
     margin-bottom: 60px;
 }
 p{
     margin-left: 10px;
     font-size: 18px;
-    font-family: sans-serif;
-    color: #2d2c2c;
+    
 }
-
+input#id_photo {
+    color: #7F0709;
+}
 .socialAPP{
     display: flex;
     justify-content: center;
@@ -175,10 +176,13 @@ p{
     margin-left: 10px;
     height: 35px;
     padding-left: 12px;
+    background-color: #A63900;
+    color: white;
     cursor: pointer;
 }
 button.create_account:hover {
     background-color:white;
+    color: #A63900;
     border-color: gray;
 }
 .button_text{
@@ -235,4 +239,15 @@ button.create_account:hover {
 #signupList{
     text-align: center;
     list-style-type: none;
+}
+
+.second-option a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.second-option a:hover {
+    color: #7F0709;
+    
 }

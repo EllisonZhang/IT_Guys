@@ -84,37 +84,19 @@
         <div class ="top-stories-title">
           <h2>Latest News</h2>
         </div>
-
         <div class="scroll-container">
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
-          <div class="scroll-card dynamic-zoom-in">
-
-          </div>
+        {% for article in articles %}
+        <div class="scroll-card dynamic-zoom-in">
+          <img src="{{ article.urlToImage}} " alt="" width="200">
+          <p><a href="{{ article.url }}" target="_blank">{{ article.title}}</a><p>
         </div>
-
-    </div>
+        
+        {% endfor %}       
 {%endblock%}
   <!-- ----------------------------------footer---------------------------------- -->
 
 
 {%block script_block%}
   <script src="/static/js/homeSlideScript.js"></script>
-<<<<<<< HEAD
-  <script src="/static/js/sideBar.js"></script>
-  <script src="/static/js/homeSlideScript.js"></script>
-</html>
-=======
 
 {%endblock%}
->>>>>>> 19954c6f276fce12defa7a5217426972e11478a5
