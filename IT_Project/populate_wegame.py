@@ -3,7 +3,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'IT_Project.settings')
 import django
 django.setup()
-from WeGame.models import Publisher,Game,Picture
+from WeGame.models import Publisher,Game,Picture,Review,Video,News
 
 def populate():
 # First, we will create lists of dictionaries containing the pages
@@ -15,7 +15,7 @@ def populate():
     # games = {"ARK: Sur":{},
     #         "Conan Exiles":{},
     # }
-    
+  
 
     publishers = {"Studio WildCard": "United States",
                 "Funcom": "United States",
@@ -30,6 +30,12 @@ def populate():
         {"game_name":"The Binding of Isaac: Rebirth","picture_path":"/media/game-pic/Binding-Of-Isaac-pic/pic2.jpg"},
         {"game_name":"The Binding of Isaac: Rebirth","picture_path":"/media/game-pic/Binding-Of-Isaac-pic/pic3.jpg"},
         {"game_name":"Don't Starve Together","picture_path":"/media/game-pic/Dont-Starve-pic/pic1.jpg"},
+    ]
+    News = [
+        {},
+        {},
+        {},
+        {},
     ]
 
     games = [
@@ -61,10 +67,12 @@ def populate():
    
     
     # for game in games:  
-    for picture in pictures:
-        for game in games: 
-            if picture["game_name"] == game["name"]:
-                g = Game.objects.get_or_create(name = picture["game_name"])
+ 
+    for game in games: 
+        g = Game.objects.get_or_create(name = game["name"])
+        print (g)
+        for picture in pictures:
+            if picture["game_name"]==game["name"]:
                 add_picture(g,picture["picture_path"])
   
 
