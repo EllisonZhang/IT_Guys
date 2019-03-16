@@ -23,7 +23,7 @@ def populate():
                 "Nicalis, Inc.":"United States",
                 "Klei Entertainment":"UK",
                 "SCS Software":"Czech Republic",
-                "Endnight Games Ltd":"China"，
+                "Endnight Games Ltd":"China",
                 "ConcernedApe":"United States",
                 "Blizzard Entertainment":"United States",
                 }
@@ -102,9 +102,9 @@ def populate():
         {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game"},
         {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game"},
         {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game"},
-        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02","game_content":"good game"},
-        {"category":"Cospaly","name":"WORLD OF WARCRFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02","game_content":"good game"},
-        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02","game_content":"good game"},
+        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game"},
+        {"category":"Cospaly","name":"WORLD OF WARCRFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game"},
+        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game"},
     ]
     
     videos = [
