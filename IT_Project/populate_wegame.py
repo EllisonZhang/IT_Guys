@@ -3,7 +3,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'IT_Project.settings')
 import django
 django.setup()
-from WeGame.models import Publisher,Game,Picture
+from WeGame.models import Publisher,Game,Picture,Review,Video,News
 
 def populate():
 # First, we will create lists of dictionaries containing the pages
@@ -15,10 +15,9 @@ def populate():
     # games = {"ARK: Sur":{},
     #         "Conan Exiles":{},
     # }
-    
+  
 
     publishers = {"Studio WildCard": "United States",
-                "Nicalis, Inc.": "United States",
                 "Funcom": "United States",
                 "Nicalis, Inc.":"United States",
                 "Klei Entertainment":"UK",
@@ -165,6 +164,7 @@ def populate():
             #     if picture["game_name"]==game["name"]:
             #         pic = add_picture(g,picture["picture_path"])
 
+<<<<<<< HEAD
    
     
     # for game in games:  
@@ -178,6 +178,13 @@ def populate():
     # for game in games:
     #     g = add_game(game["category"],game["name"],
     #     game["publisher_name"],game["year_released"],game["game_content"])
+=======
+    for picture in pictures:
+        pic = add_picture(picture["game_name"],picture["picture_path"])
+    
+    for video in videos:
+        vi = add_video(video["game_name"],video["video_path"])
+>>>>>>> a5a97fd40631e187aa2d24d30427beaa66fd3a33
 
 
 
@@ -197,6 +204,10 @@ def add_picture(game,path):
     pic.save()
     return pic
 
+def add_video(game,path):
+    vi = Video.objects.get_or_create(game_name=game,video_path=path)[0]
+    vi.save()
+    return vi
 
 # Start execution here!
 if __name__ == '__main__':

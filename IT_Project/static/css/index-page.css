@@ -70,6 +70,22 @@ a {
     justify-content: left;
     align-items: stretch;
 }
+.over {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: black;
+  }
+.story-card:hover .over{
+    opacity: 0.5;
+  }
+
 .top-stories-container{
     padding-left: 40px;
     padding-right: 40px;
@@ -92,7 +108,7 @@ a {
 }
 
 .story1{
-    background: url(/static/home-pic/ARK.jpeg);
+    background-image: url(/static/home-pic/ARK.jpeg);
 }
 
 .story2{

@@ -5,6 +5,9 @@
     margin-right: 5px;
 }
 
+.errorlist {
+    list-style: none;
+}
 
 
 label {
