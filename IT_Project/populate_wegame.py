@@ -168,11 +168,11 @@ def populate():
    
     
     # for game in games:  
-    for picture in pictures:
-        for game in games: 
-            if picture["game_name"] == game["name"]:
-                g = Game.objects.get_or_create(name = picture["game_name"])
-                add_picture(g,picture["picture_path"])
+    # for picture in pictures:
+    #     for game in games: 
+    #         if picture["game_name"] == game["name"]:
+    #             g = Game.objects.get_or_create(name = picture["game_name"])
+    #             add_picture(g,picture["picture_path"])
   
 
     # for game in games:
