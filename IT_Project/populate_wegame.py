@@ -154,37 +154,23 @@ def populate():
     # if you are using Python 2.x then use cats.iteritems() see
     # http://docs.quantifiedcode.com/python-anti-patterns/readability/
     # for more information about how to iterate over a dictionary properly.
-    
     for publisher,publisher_data in publishers.items():
         p = add_publisher(publisher,publisher_data)
         for game in games:
             if game["publisher_name"] == publisher:
-                g = add_game(game["category"],game["name"],p,game["year_released"],game["game_content"])
-            # for picture in pictures:
-            #     if picture["game_name"]==game["name"]:
-            #         pic = add_picture(g,picture["picture_path"])
-
-<<<<<<< HEAD
-   
+               add_game(game["category"],game["name"],p,game["year_released"],game["game_content"])
     
-    # for game in games:  
-    # for picture in pictures:
-    #     for game in games: 
-    #         if picture["game_name"] == game["name"]:
-    #             g = Game.objects.get_or_create(name = picture["game_name"])
-    #             add_picture(g,picture["picture_path"])
-  
+    for game in Game.objects.all():
+        for picture in pictures:
+            if picture["game_name"] == game.name:
+                add_picture(game,picture["picture_path"])
 
-    # for game in games:
-    #     g = add_game(game["category"],game["name"],
-    #     game["publisher_name"],game["year_released"],game["game_content"])
-=======
-    for picture in pictures:
-        pic = add_picture(picture["game_name"],picture["picture_path"])
+    for game in Game.objects.all():
+        for video in videos:
+            if video["game_name"] == game.name:
+                add_video(game,video["video_path"])
     
-    for video in videos:
-        vi = add_video(video["game_name"],video["video_path"])
->>>>>>> a5a97fd40631e187aa2d24d30427beaa66fd3a33
+    
 
 
 
