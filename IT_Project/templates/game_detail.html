@@ -23,14 +23,18 @@
 
         <div class = infor-part>
         <div class ="vedio-section">
-
+          
             <!-- Full-width images with number text -->
+                        {% for video in video_list %}
+                        {% if video.game_name == game %}
                         <div class="mySlides">
                           <!-- <div class="numbertext">4 / 6</div> -->
                             <!-- <img src="/static/home-pic/overwatch.jpeg" style="width:100%"> -->
-                            <iframe  src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                            <iframe  src="{{ video.video_path }}">
                             </iframe>
                         </div>
+                        {% endif%}
+                        {% endfor %}
                         <div class="mySlides">
                           <!-- <div class="numbertext">1 / 6</div> -->
                             <img src="/static/home-pic/ARK.jpeg" style="width:100%">
@@ -62,38 +66,25 @@
                  
                         <!-- Thumbnail images -->
                         <div class="row">
-                          <div class="column">
-                            <img class="demo cursor" src="/static/home-pic/ARK.jpeg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                          </div>
-                          <div class="column"> 
-                            <img class="demo cursor" src="/static/home-pic/EU-truck.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                          </div>
-                          <div class="column">
-                            <img class="demo cursor" src="/static/home-pic/Hearthstone.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                          </div>
-                          <div class="column">
-                            <img class="demo cursor" src="/static/home-pic/overwatch.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                          </div>
-                          <div class="column">
-                            <img class="demo cursor" src="/static/home-pic/stardew-valley.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-                          </div> 
-                          <div class="column">
-                            <img class="demo cursor" src="/static/home-pic/WoW.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-                          </div>
+                          {% for picture in picture_list %}
+                            {% if picture.game_name == game%}
+                              <div class="column">
+                                <img class="demo cursor used_images" src="{{ picture.picture_path }}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                              </div>
+                            {% endif %}
+                          {% endfor %}
                         </div>
            
 
         </div>
 
         <!-- the content of game / on the right -->
-        <div class ="infor-section">
-            <img src="/static/home-pic/ARK.jpeg" style="width:100%;height:40%">
-              <div class ="subtitle_column">Discribe: djodjdjdjjoo
-                dfkdlfdfldlfdlfldllldldldll
-                kfldlfdklldldldfd
+        <div class ="infor-section">  
+            <img src="" id="game_image"style="width:100%">   
+              <div class ="subtitle_column">Description: {{ game.game_content }}
               </div>
-              <div class ="subtitle_column">Release Date: March 1st, 2019</div>
-              <div class ="subtitle_column">Publish: jdjfhjdkff</div>
+              <div class ="subtitle_column">Release Date: {{ game.year_released }}</div>
+              <div class ="subtitle_column">Published by: {{ game.publisher_name }}</div>
             </div>
         </div>
       </div>
@@ -153,6 +144,11 @@
 
 {%block script_block%}
 <script src="/static/js/slideInGames.js"></script>
+<script>
+  var elements = document.getElementsByClassName('used_images');
+  imageUsed = elements[0]
+  document.getElementById("game_image").src = imageUsed.src;
+</script>
 {%endblock%}
 
 
