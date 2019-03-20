@@ -97,15 +97,15 @@ def populate():
     ]
 
     games = [
-        {"category":"Survival","name":"ARK:Survival Invovled","publisher_name":"Studio WildCard","year_released":"2017-08-27","game_content":"good game"},
-        {"category":"Cosplay","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game"},
-        {"category":"Indie","name":"The Binding of Isaac: Rebirth","publisher_name":"Nicals, Inc.","year_released":"2014-11-04","game_content":"good game"},
-        {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game"},
-        {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game"},
-        {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game"},
-        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game"},
-        {"category":"Cospaly","name":"WORLD OF WARCRFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game"},
-        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game"},
+        {"category":"Survival","name":"ARK:Survival Invovled","publisher_name":"Studio WildCard","year_released":"2017-08-27","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Cosplay","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Indie","name":"The Binding of Isaac: Rebirth","publisher_name":"Nicals, Inc.","year_released":"2014-11-04","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Cospaly","name":"WORLD OF WARCRFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
     ]
     
     videos = [
@@ -161,7 +161,7 @@ def populate():
         p = add_publisher(publisher,publisher_data)
         for game in games:
             if game["publisher_name"] == publisher:
-               add_game(game["category"],game["name"],p,game["year_released"],game["game_content"])
+               add_game(game["category"],game["name"],p,game["year_released"],game["game_content"], game["image"])
     
     for game in Game.objects.all():
         for picture in pictures:
@@ -188,9 +188,9 @@ def add_publisher(publisher,country):
     p.save()
     return p
 
-def add_game(category,name,publisher,year_released,game_content):
+def add_game(category,name,publisher,year_released,game_content, game_image):
     g = Game.objects.get_or_create(category=category,name=name,
-    publisher_name=publisher,year_released=year_released,game_content=game_content)[0]
+    publisher_name=publisher,year_released=year_released,game_content=game_content, image=game_image)[0]
     g.save()
     return g
 
