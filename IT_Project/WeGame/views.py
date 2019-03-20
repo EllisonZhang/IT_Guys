@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Game, Review, Picture, Video
 from django.urls import reverse_lazy
 from newsapi import NewsApiClient
@@ -17,7 +18,7 @@ class GameDetailView(DetailView):
         return context
     
 
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
     template_name = 'review_new.html'
     fields = ['game_reviewed', 'comment_text']
