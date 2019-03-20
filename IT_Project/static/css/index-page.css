@@ -179,6 +179,8 @@ a {
     color: #A63900;
     background-color:white;
     height: 350px;
+    overflow-x:hidden;
+    overflow-y:hidden;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -192,9 +194,15 @@ a {
     width: 350px;
     padding: 2px 16px;
     white-space: pre-line;
-    
+   
   }
   
 img {
     border-radius: 5px 5px 0 0;
+    width: 100%;
+    transition: all 2s;
+
+}
+.news_image:hover {
+    transform: scale(1.05);
 }
