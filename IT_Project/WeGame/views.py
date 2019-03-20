@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
-from .models import Game, Review
+from .models import Game, Review, Picture, Video
 from django.urls import reverse_lazy
 from newsapi import NewsApiClient
 
@@ -12,6 +12,8 @@ class GameDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         context['review_list'] = Review.objects.all()
+        context['picture_list'] = Picture.objects.all()
+        context['video_list'] = Video.objects.all()
         return context
     
 

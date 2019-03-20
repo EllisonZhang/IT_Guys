@@ -164,3 +164,8 @@
   width: 100%;
   color: #c6d4df;
 }
+
+.reviews-container {
+  margin: 0 auto;
+  width: 75%
+}

@@ -105,6 +105,7 @@
           <h2>Reviews</h2>
         </div>
         {% for review in review_list %}
+          {% if review.game_reviewed == game %}
         <div class="review-box">
           <!-- left side of the box -->
           <div class= "review-box-left">
@@ -140,6 +141,7 @@
 
 
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 
