@@ -5,6 +5,7 @@ from WeGame.models import Publisher
 from accounts.models import CustomUser
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
+from django.template import loader
 
 class ReviewMethodTests(TestCase):
     def test_ensure_likes_are_positive(self):
@@ -17,6 +18,7 @@ class ReviewMethodTests(TestCase):
         userCustom = CustomUser(age='24')
         rev = Review(number_likes=-1,number_dislikes=0,comment_text="test",creation_date=2019-10-25, game_reviewed= gam, user= userCustom)
         self.assertEqual((rev.number_likes >=0), True)
+        
 
 
     def test_ensure_dislikes_are_positive(self):
@@ -56,3 +58,30 @@ class StaticImageTests(TestCase):
         """
         foundImage = finders.find('game1.jpg')
         self.assertIsNotNone(foundImage)
+
+# class IndexPageTests(TestCase):
+
+#     def test_index_page(self):
+#        """
+#        Check if there is an index page and the template was used
+#        """
+#        response = self.client.get(reverse('index'))
+#        self.assertTemplateUsed(response, 'wegame/home.html')
+
+#     def test_bootstrap_css_in_base(self):
+#         response = self.client.get(reverse('index'))
+#         self.assertIn('<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">',
+#         response.content)
+
+# class SlugTest(TestCase):
+    
+#     def test_slug(self):
+#         """
+#         check that slugs works correctly
+#         """
+#         pub = Publisher(name='test', country='USA')
+#         game = Game(category='tests',name='World of Warcraft',publisher_name= pub, year_released='2000', game_content="moreTest")
+#         game.save()
+#         self.assertEqual(game.slug, 'World-of-Warcraft')
+
+

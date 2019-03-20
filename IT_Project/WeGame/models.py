@@ -2,8 +2,8 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 class Review(models.Model):
-    number_likes = models.IntegerField(default = 0)
-    number_dislikes = models.IntegerField(default = 0)
+    number_likes = models.PositiveIntegerField(default = 0)
+    number_dislikes = models.PositiveIntegerField(default = 0)
     comment_text = models.CharField(max_length=500)
     creation_date = models.DateTimeField(auto_now=True)
     game_reviewed = models.ForeignKey('Game', on_delete=models.SET_NULL, null=True)
@@ -11,6 +11,13 @@ class Review(models.Model):
 
     def __str__(self):
         return self.comment_text
+
+    # def save(self, *args, **kwargs):
+    #     if self.number_likes < 0:
+    #         self.number_likes = 0
+    #     if self.number_dislikes < 0:
+    #         self.number_dislikes = 0
+    #     super(Review, self).save(*args, **kwargs)
 
 class Game(models.Model):
     category = models.CharField(max_length=30)
