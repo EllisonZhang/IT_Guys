@@ -1,9 +1,11 @@
-var slideIndex = 1;
+var slideIndex = 0;
 showSlides(slideIndex);
+autoShowSlides();
 
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  
 }
 
 // Thumbnail image controls
@@ -25,6 +27,11 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
+}
+
+function autoShowSlides(){
+  plusSlides(1);
+  setTimeout(autoShowSlides,3000);
 }
 
 
