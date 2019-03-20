@@ -77,36 +77,10 @@
         </a>
         </div>
         {% for game in games %}
-        <a class = "story-card dynamic-zoom-in story2" href="/wegame/games/{{ game.slug }}"><div >
+        <a style="background:url(http://127.0.0.1:8000{{game.image}});" class = "story-card dynamic-zoom-in" href="/wegame/games/{{ game.slug }}"></a><div >
             
           </div></a>
         {% endfor %}
-        
-        <div class = "story-card dynamic-zoom-in story3">
-            
-        </div>
-        <div class = "story-card dynamic-zoom-in story4">
-
-        </div>
-        <div class = "story-card dynamic-zoom-in story5">
-
-        </div>
-        <div class = "story-card dynamic-zoom-in story6">
-
-        </div>
-        <div class = "story-card dynamic-zoom-in story7">
-  
-        </div>
-        <div class = "story-card dynamic-zoom-in story8">
-  
-        </div>
-        <div class = "story-card dynamic-zoom-in story9">
-  
-        </div>
-        <div class = "story-card dynamic-zoom-in story10">
-  
-        </div>
-
 
       </div>
     </div>
