@@ -110,7 +110,8 @@
     display: inline-block;
     position: inherit;
     width: 40%;
-    background-color: #6f4b31;
+    /* background-color: #6f4b31; */
+    color: #a53934;
 
 }
 .review-box{
@@ -133,12 +134,17 @@
 .user-name{
   margin-left: 20px;
   padding-top: 5px;
+  width: 100px;
+  overflow: hidden;
 }
+
 .user-name a{
   text-decoration: none;
   color: #A63900;
 }
-
+span {
+  line-height: 2;
+}
 .review-box-right{
   float: left;
   width: 100%;
@@ -155,7 +161,9 @@
 .dislike{
   margin-left: 30%;
 }
-
+.fas{
+  color: #A63900;
+}
 
 .content{
   line-height: 30px;
@@ -163,6 +171,9 @@
 .subtitle_column{
   width: 100%;
   color: #c6d4df;
+}
+.description-container{
+
 }
 
 .reviews-container {

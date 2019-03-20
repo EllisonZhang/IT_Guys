@@ -66,10 +66,11 @@
         <!-- the content of game / on the right -->
         <div class ="infor-section">  
             <img src="" id="game_image"style="width:100%">   
-              <div class ="subtitle_column">Description: {{ game.game_content }}
+              <div class ="description-container">
+                <span>{{ game.game_content }}</span>
               </div>
-              <div class ="subtitle_column">Release Date: {{ game.year_released }}</div>
-              <div class ="subtitle_column">Published by: {{ game.publisher_name }}</div>
+              <!-- <div class ="date-container">Release Date: {{ game.year_released }}</div>
+              <div class ="publisher-container">Published by: {{ game.publisher_name }}</div> -->
             </div>
         </div>
       </div>
