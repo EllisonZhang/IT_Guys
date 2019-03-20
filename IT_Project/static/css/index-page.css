@@ -161,7 +161,7 @@ a {
     text-decoration: none;
 }
 .scroll-container{
-    width: 80%;
+    width: 100%;
     overflow: auto;
     white-space: nowrap;  
     display: flex;

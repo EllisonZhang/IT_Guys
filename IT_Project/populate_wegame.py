@@ -107,19 +107,15 @@ def populate():
     ]
     
     videos = [
-        {"game_name":"ARK:Survival Invovled","video_path":"https://www.youtube.com/watch?v=E9Wb_zRnJek"},
         {"game_name":"ARK:Survival Invovled","video_path":"https://www.youtube.com/embed/E9Wb_zRnJek"},
-        {"game_name":"The Binding of Isaac: Rebirth","video_path":"https://www.youtube.com/watch?v=DALFKiVsoDk"},
-        {"game_name":"Don't Starve Together","video_path":"https://www.youtube.com/watch?v=_k3fUJpDXxs"},
-        {"game_name":"Euro Truck Simulator 2","video_path":"https://www.youtube.com/watch?v=2bfVnhxFvfQ"},
+        {"game_name":"The Binding of Isaac: Rebirth","video_path":"https://www.youtube.com/embed/DALFKiVsoDk"},
+        {"game_name":"Don't Starve Together","video_path":"https://www.youtube.com/embed/k3fUJpDXxs"},
         {"game_name":"Euro Truck Simulator 2","video_path":"https://www.youtube.com/embed/2bfVnhxFvfQ"},
-        {"game_name":"The Forest","video_path":"https://www.youtube.com/watch?v=FM28K6ABbQs"},
-        {"game_name":"Hearthstone","video_path":"https://www.youtube.com/watch?v=HaZH57Q9B18"},
+        {"game_name":"The Forest","video_path":"https://www.youtube.com/embed/FM28K6ABbQs"},
         {"game_name":"Hearthstone","video_path":"https://www.youtube.com/embed/HaZH57Q9B18"},
-        {"game_name":"Hearthstone","video_path":"https://www.youtube.com/watch?v=HaZH57Q9B18"},
-        {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/watch?v=fT-HvMPJvhA"},
-        {"game_name":"WORLD OF WARCRFT","video_path":"https://www.youtube.com/watch?v=qnkjIm8uEfE"},
-        {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/watch?v=dkYOLIirm5w"},
+        {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/embed/fT-HvMPJvhA"},
+        {"game_name":"WORLD OF WARCRFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE"},
+        {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/embed/dkYOLIirm5w"},
     ]
 
     reviews = [
