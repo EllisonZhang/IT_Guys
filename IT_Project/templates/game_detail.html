@@ -35,30 +35,15 @@
                         </div>
                         {% endif%}
                         {% endfor %}
+                        {% for picture in picture_list %}
+                            {% if picture.game_name == game%}
                         <div class="mySlides">
                           <!-- <div class="numbertext">1 / 6</div> -->
-                            <img src="/static/home-pic/ARK.jpeg" style="width:100%">
+                            <img src="{{ picture.picture_path }}" style="width:100%">
                         </div>
-                      
-                        <div class="mySlides">
-                          <!-- <div class="numbertext">2 / 6</div> -->
-                            <img src="/static/home-pic/EU-truck.jpg" style="width:100%">
-                        </div>
-                      
-                        <div class="mySlides">
-                          <!-- <div class="numbertext">3 / 6</div> -->
-                            <img src="/static/home-pic/Hearthstone.jpg" style="width:100%">
-                        </div>
-                        <div class="mySlides">
-                          <!-- <div class="numbertext">5 / 6</div> -->
-                            <img src="/static/home-pic/stardew-valley.png" style="width:100%">
-                        </div>
-                      
-                        <div class="mySlides">
-                          <!-- <div class="numbertext">6 / 6</div> -->
-                            <img src="/static/home-pic/WoW.jpg" style="width:100%">
-                        </div>
-                      
+                          {% endif %}
+                        {% endfor %}
+            
                         <!-- Next and previous buttons -->
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -107,7 +92,7 @@
             <div class ="avatar">
               <a href="#"></a>
                 {% if review.user.photo %}
-                <img src="/{{ review.user.photo }} ">
+                <img src="{{ review.user.photo }} ">
                 {% else %}
                 <img src="/static/we-logo.jpg">
                 {% endif %}
@@ -120,15 +105,15 @@
           </div>
           <!-- right side of the box -->
           <div class="review-box-right">
-            <div class = "content">
+            <div>
               <span>{{ review.comment_text }}</span>
             </div>
             <div class = "like-dislike" >
               <a href = "#"> 
-                  <i class="fas fa-thumbs-up">  like</i>
+                  <i class="fas fa-thumbs-up"> {{ review.number_likes }}</i>
               </a>
               <a class ="dislike" href = "#"> 
-                  <i class="fas fa-thumbs-down">  dislike</i>
+                  <i class="fas fa-thumbs-down"> {{ review.number_dislikes }}</i>
               </a>
               
             </div>

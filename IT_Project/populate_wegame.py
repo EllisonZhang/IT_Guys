@@ -87,25 +87,25 @@ def populate():
         {"game_name":"Stardew Valley","picture_path":"/media/game-pic/Stardewvalley-pic/pic5.jpg"},
         {"game_name":"Stardew Valley","picture_path":"/media/game-pic/Stardewvalley-pic/pic6.jpg"},
         {"game_name":"Stardew Valley","picture_path":"/media/game-pic/Stardewvalley-pic/pic7.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic1.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic2.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic3.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic4.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic5.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic6.jpg"},
-        {"game_name":"WORLD OF WARCRFT","picture_path":"/media/game-pic/WOW-pic/pic7.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic1.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic2.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic3.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic4.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic5.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic6.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic7.jpg"},
     ]
 
     games = [
-        {"category":"Survival","name":"ARK:Survival Invovled","publisher_name":"Studio WildCard","year_released":"2017-08-27","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Cosplay","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Indie","name":"The Binding of Isaac: Rebirth","publisher_name":"Nicals, Inc.","year_released":"2014-11-04","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Cospaly","name":"WORLD OF WARCRFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
-        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game", "image": "/media/game-pic/WOW-pic/pic7.jpg"},
+        {"category":"Survival","name":"ARK:Survival Invovled","publisher_name":"Studio WildCard","year_released":"2017-08-27","game_content":"good game", "image": "/static/home-pic/ARK.jpeg"},
+        {"category":"Cosplay","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game", "image": "/static/home-pic/stardew-valley.png"},
+        {"category":"Indie","name":"The Binding of Isaac: Rebirth","publisher_name":"Nicalis, Inc.","year_released":"2014-11-04","game_content":"good game", "image": "/static/home-pic/the-binding-of-isaac.png"},
+        {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game", "image": "/static/home-pic/starve.jpeg"},
+        {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game", "image": "/static/home-pic/EU-truck.jpg"},
+        {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game", "image": "/static/home-pic/the-forest.jpg"},
+        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game", "image": "/static/home-pic/overwatch.jpeg"},
+        {"category":"Cospaly","name":"WORLD OF WARCRAFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game", "image": "/static/home-pic/WoW.jpg"},
+        {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game", "image": "/static/home-pic/Hearthstone.jpg"},
     ]
     
     videos = [
@@ -116,7 +116,7 @@ def populate():
         {"game_name":"The Forest","video_path":"https://www.youtube.com/embed/FM28K6ABbQs"},
         {"game_name":"Hearthstone","video_path":"https://www.youtube.com/embed/HaZH57Q9B18"},
         {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/embed/fT-HvMPJvhA"},
-        {"game_name":"WORLD OF WARCRFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE"},
+        {"game_name":"WORLD OF WARCRAFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE"},
         {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/embed/dkYOLIirm5w"},
     ]
 
@@ -129,7 +129,7 @@ def populate():
         {"game_name":"Hearthstone","username":"GerardoAragonCamarasa","number_likes":"2","number_dislikes":"3","text":"Hearthstone, the newest card game from Blizzard, will keep you hooked for hours thanks to the amazing presentation and the tactical, deep gameplay. This is free to play done right."},
         {"game_name":"OVERWATCH","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"Easily one of the best multiplayer first person shooters. Vastly better than Team Fortress 2, which i used to play in the past."},
         {"game_name":"Stardew Valley","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"The charming RPG Stardew Valley is so much more than just another farming simulator and feels right at home on the Switch."},
-        {"game_name":"WORLD OF WARCRFT","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"Battle of Azeroth isn’t as good as Legion was. But the Horde vs Alliance conflict is stronger than ever, and being part of this big conflict is pure fun. Veterans will enjoy HL content and how the lore is constantly used."},
+        {"game_name":"WORLD OF WARCRAFT","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"Battle of Azeroth isn’t as good as Legion was. But the Horde vs Alliance conflict is stronger than ever, and being part of this big conflict is pure fun. Veterans will enjoy HL content and how the lore is constantly used."},
         {"game_name":"ARK:Survival Invovled","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"The developers state that it is possible to obtain every available structure, item and enhancement without having to spend any money. Free gifts pop up every couple of hours that can be redeemed by watching ads."},
         {"game_name":"The Binding of Isaac: Rebirth","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"Crazier, funnier and bigger. Rebirth is a proper rebuilt of one of the most brilliant games we've enjoyed lately. There are a handful of new features and probably even more content than we could've asked for, even though die-hard fans might consider rebuying a game that's very much the same, but widely expanded."},
         {"game_name":"Don't Starve Together","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"Don't Starve Together does little to fix the original's glaring problems, but still, conquering the wilderness together with friends is a lot of fun."},
@@ -138,7 +138,7 @@ def populate():
         {"game_name":"Hearthstone","username":"Nelson","number_likes":"2","number_dislikes":"3","text":"Between its friendly design and its flexible approach to a free-to-play economy, Hearthstone has successfully pulled me into a genre that I didn't care about in the least. But even more incredibly, it's kept me rapt longer than any games I've played in years, and shows no signs of letting up."},
         {"game_name":"OVERWATCH","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"A gaming experience that’s more polished and exciting than I have ever had the pleasure of experiencing and one I’ll be sure to continue to play for the foreseeable future. If not for the inclusion of microtransactions, this would have been a perfect game in my book."},
         {"game_name":"Stardew Valley","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"The charming RPG Stardew Valley is so much more than just another farming simulator and feels right at home on the Switch."},
-        {"game_name":"WORLD OF WARCRFT","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"Battle for Azeroth, despite the endless grind, has been an exciting expansion this far. However, raids and additional content are what makes the game great. Blizzard has made the entry level into the new expansion welcoming for new players and some die-hard critics have shared their concerns with the current direction Blizzard are going with making the gaming “easier.”"},
+        {"game_name":"WORLD OF WARCRAFT","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"Battle for Azeroth, despite the endless grind, has been an exciting expansion this far. However, raids and additional content are what makes the game great. Blizzard has made the entry level into the new expansion welcoming for new players and some die-hard critics have shared their concerns with the current direction Blizzard are going with making the gaming “easier.”"},
     ]
 
     users = [

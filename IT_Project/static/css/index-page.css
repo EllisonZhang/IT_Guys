@@ -111,35 +111,6 @@ a {
     background-image: url(/static/home-pic/ARK.jpeg);
 }
 
-.story2{
-    background: url(/static/home-pic/EU-truck.jpg)
-}
-.story3{
-    background: url(/static/home-pic/WoW.jpg);
-}
-
-.story4{
-    background: url(/static/home-pic/Hearthstone.jpg)
-}
-.story5{
-    background: url(/static/home-pic/overwatch.jpeg);
-}
-
-.story6{
-    background: url(/static/home-pic/stardew-valley.png)
-}
-.story7{
-    background: url(/static/home-pic/starve.jpeg)
-}
-.story8{
-    background: url(/static/home-pic/the-binding-of-isaac.png)
-}
-.story9{
-    background: url(/static/home-pic/the-forest.jpg)
-}
-.story10{
-    background: url(/static/registration.jpg)
-}
 
 /* **************  scroll manue  *************** */
 .scroll-card{
@@ -179,6 +150,8 @@ a {
     color: #A63900;
     background-color:white;
     height: 350px;
+    overflow-x:hidden;
+    overflow-y:hidden;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -192,9 +165,15 @@ a {
     width: 350px;
     padding: 2px 16px;
     white-space: pre-line;
-    
+   
   }
   
 img {
     border-radius: 5px 5px 0 0;
+    width: 100%;
+    transition: all 2s;
+
+}
+.news_image:hover {
+    transform: scale(1.05);
 }
