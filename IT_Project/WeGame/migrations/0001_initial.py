@@ -24,16 +24,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=30)),
                 ('year_released', models.DateField(max_length=30)),
                 ('game_content', models.TextField(default='', null=True)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='News',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('news_title', models.CharField(max_length=100)),
-                ('news_content', models.TextField(default='', null=True)),
-                ('news_data', models.DateField(max_length=30)),
-                ('editor_name', models.CharField(max_length=100)),
+                ('slug', models.SlugField()),
             ],
         ),
         migrations.CreateModel(

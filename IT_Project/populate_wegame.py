@@ -3,7 +3,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'IT_Project.settings')
 import django
 django.setup()
-from WeGame.models import Publisher,Game,Picture,Review,Video,News
+from WeGame.models import Publisher,Game,Picture,Review,Video
 
 def populate():
 # First, we will create lists of dictionaries containing the pages
