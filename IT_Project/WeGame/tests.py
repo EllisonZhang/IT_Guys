@@ -4,6 +4,7 @@ from WeGame.models import Game
 from WeGame.models import Publisher
 from accounts.models import CustomUser
 from django.core.urlresolvers import reverse
+from django.contrib.staticfiles import finders
 
 class ReviewMethodTests(TestCase):
     def test_ensure_likes_are_positive(self):
@@ -46,3 +47,12 @@ class AboutPageTests(TestCase):
         """
         response = self.client.get(reverse('about'))
         self.assertTemplateUsed(response, 'wegame/about.html')
+
+
+class StaticImageTests(TestCase):
+    def test_static_files(self):
+        """
+        Check if static media is used properly, not none if it fines a specific image
+        """
+        foundImage = finders.find('game1.jpg')
+        self.assertIsNotNone(foundImage)

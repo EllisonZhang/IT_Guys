@@ -4,6 +4,7 @@
 {%block head_block%}
     <title>WeGame</title>
     <link rel = "stylesheet" href="/static/css/index-page.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|ZCOOL+XiaoWei" rel="stylesheet">
 {%endblock%}
 
 {%block body_block%}
@@ -12,13 +13,43 @@
     <div class="slide-show-container">
       <!-- Full-width images with number text -->
       <div class="mySlides fade">
-          <img src="/static/game1.jpg" style="width:100%">
+          <img class="sliding_image" src="/static/game1.jpg">
+          <div class = "content">
+              <a  href="http://127.0.0.1:8000/wegame/games/1/">
+                <span class = "advertisement1">THE FOREST</span>
+                <br>
+                <span class = "advertisement2"> Enter a living, breathing world</span> 
+                <br>
+                <span class = "advertisement3"> Build a small shelter or a large ocean side fortress.</span>
+              </a>
+              <br>  
+          </div>
+          
       </div>
       <div class="mySlides fade">
-          <img src="/static/Minecraft.jpg" style="width:100%">
+          <img class="sliding_image" src="/static/ARK.jpeg">
+          <div class = "content">
+              <a  href="http://127.0.0.1:8000/wegame/games/1/">
+                <span class = "advertisement1">ARK: SURVIVAL INVOLVED</span>
+                <br>
+                <span class = "advertisement2"> Developed by Studio Wildcard</span> 
+                &nbsp &nbsp
+                <span class = "advertisement3"> 132 species of creatures </span>
+              </a>
+              <br>  
+          </div>
       </div>
       <div class="mySlides fade">
-          <img src="/static/game2.jpg" style="width:100%">
+          <img class="sliding_image" src="/static/game2.jpg">
+          <div class = "content">
+              <a  href="#">
+                <span class = "advertisement1">Ubisoft - Assassin's Creed Origins</span>
+                <br>
+                <span class = "advertisement2"> A Country to Discover</span> &nbsp &nbsp
+                <span class = "advertisement3"> A New Story Ever Time You Play</span>
+              </a>
+              <br>  
+          </div>
       </div>
     
       <!--Next and previous buttons -->
@@ -102,4 +133,5 @@
 {%endblock%}
 {%block script_block%}
   <script src="/static/js/homeSlideScript.js"></script>
+  
 {%endblock%}
