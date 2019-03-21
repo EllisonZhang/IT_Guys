@@ -25,13 +25,12 @@
           <!-- <a class="nav-bar-item" href="home.html"> -->
             <div class="sidenav" id="mySidenav">
                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               
                 <a class = "side-content" href="#">Categories</a>
-                <a class = "Categories  " href="#">Indie</a>
-                <a class = "Categories " href="#">Advanture</a>
-                <a class = "Categories" href="#">RPG</a>
-                <a class = "Categories " href="#">MMORPG</a>
-                <a class = "Categories" href="#">Sports</a>
-                <a class = "Categories " href="#">Strategy</a>
+                {% for category in categories %}
+                <a class = "Categories" href="{{ category.url}}" target="_blank">{{ category.name}}</a>
+                {% endfor %}
+                
             </div>
             <div class="nav-bar-label nav-bar-item">
                 <span onclick="openNav()">&#9776;</span>

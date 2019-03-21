@@ -51,18 +51,11 @@ class ReviewDeleteView(DeleteView):
 
 # Create your views here.
 def index(request):
-    headers = {
-      'Accept': 'application/json',
-      'user-key': 'dde43976f970861f82bb8e3ea9cf06f8'
-    }
-    r = requests.post("https://api-v3.igdb.com/genres?fields=name,slug,updated_at,url&limit=8", headers=headers)
-    categories = r.json()
     newsapi = NewsApiClient(api_key='7184697691164311aaca455ed36c0b68')
     top_headlines = newsapi.get_top_headlines(sources='ign')
     games = Game.objects.all()
     return render(request, 'wegame/home.html', {
         'articles':top_headlines['articles'], 
-        'categories': categories,
         'games': games
     })
 
