@@ -58,6 +58,9 @@ def index(request):
         'games': games
     })
 
+def category(request):
+    return render(request, 'wegame/category.html')
+
 def like_review(request):
     review_id = None
     if request.method == 'GET':

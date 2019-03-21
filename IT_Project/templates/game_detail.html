@@ -52,6 +52,14 @@
                  
                         <!-- Thumbnail images -->
                         <div class="row">
+                            {% for video in video_list %}
+                            {% if video.game_name == game %}
+                            
+                            <div class="column">
+                                <img class="demo cursor used_images" src="{{ video.video_infor_pic_path }}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                              </div>
+                            {% endif%}
+                            {% endfor %}
                           {% for picture in picture_list %}
                             {% if picture.game_name == game%}
                               <div class="column">
@@ -143,7 +151,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   var elements = document.getElementsByClassName('used_images');
-  imageUsed = elements[0]
+  imageUsed = elements[1]
   document.getElementById("game_image").src = imageUsed.src;
   $('.likez').click(function () {
     var reviewid;

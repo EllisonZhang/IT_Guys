@@ -119,16 +119,16 @@ def populate():
     ]
     
     videos = [
-        {"game_name":"ARK:Survival Invovled","video_path":"https://www.youtube.com/embed/E9Wb_zRnJek"},
-        {"game_name":"The Binding of Isaac: Rebirth","video_path":"https://www.youtube.com/embed/DALFKiVsoDk"},
-        {"game_name":"Don't Starve Together","video_path":"https://www.youtube.com/embed/k3fUJpDXxs"},
-        {"game_name":"Euro Truck Simulator 2","video_path":"https://www.youtube.com/embed/2bfVnhxFvfQ"},
-        {"game_name":"The Forest","video_path":"https://www.youtube.com/embed/FM28K6ABbQs"},
-        {"game_name":"Hearthstone","video_path":"https://www.youtube.com/embed/HaZH57Q9B18"},
-        {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/embed/fT-HvMPJvhA"},
-        {"game_name":"WORLD OF WARCRAFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE"},
-        {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/embed/dkYOLIirm5w"},
-        {"game_name":"Assassin's Creed Origins","video_path":"https://www.youtube.com/embed/cK4iAjzAoas"},
+        {"game_name":"ARK:Survival Invovled","video_path":"https://www.youtube.com/embed/E9Wb_zRnJek","video_infor_pic_path":"/media/game-pic/Ark-pic/video.jpg"},
+        {"game_name":"The Binding of Isaac: Rebirth","video_path":"https://www.youtube.com/embed/DALFKiVsoDk","video_infor_pic_path":"/media/game-pic/Binding-Of-Isaac-pic/video.jpg"},
+        {"game_name":"Don't Starve Together","video_path":"https://www.youtube.com/embed/k3fUJpDXxs","video_infor_pic_path":"/media/game-pic/Dont-Starve-pic/video.jpg"},
+        {"game_name":"Euro Truck Simulator 2","video_path":"https://www.youtube.com/embed/2bfVnhxFvfQ","video_infor_pic_path":"/media/game-pic/EU-Truck-pic/video.jpg"},
+        {"game_name":"The Forest","video_path":"https://www.youtube.com/embed/FM28K6ABbQs","video_infor_pic_path":"/media/game-pic/Forest-pic/video.jpg"},
+        {"game_name":"Hearthstone","video_path":"https://www.youtube.com/embed/HaZH57Q9B18","video_infor_pic_path":"/media/game-pic/Hearthstone-pic/video.jpg"},
+        {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/embed/fT-HvMPJvhA","video_infor_pic_path":"/media/game-pic/Overwatch-pic/video.jpg"},
+        {"game_name":"WORLD OF WARCRAFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE","video_infor_pic_path":"/media/game-pic/WOW-pic/video.jpg"},
+        {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/embed/dkYOLIirm5w","video_infor_pic_path":"/media/game-pic/Stardewvalley-pic/video.jpg"},
+        {"game_name":"Assassin's Creed Origins","video_path":"https://www.youtube.com/embed/cK4iAjzAoas","video_infor_pic_path":"/media/game-pic/Assassin's-Creed-pic/video.jpg"},
     ]
 
     reviews = [
@@ -184,7 +184,7 @@ def populate():
     for game in Game.objects.all():
         for video in videos:
             if video["game_name"] == game.name:
-                add_video(game,video["video_path"])
+                add_video(game,video["video_path"],video["video_infor_pic_path"])
     
     for user in users:
         add_user(user["username"], user["password"], user["photo"])
@@ -212,8 +212,8 @@ def add_picture(game,path):
     pic.save()
     return pic
 
-def add_video(game,path):
-    vi = Video.objects.get_or_create(game_name=game,video_path=path)[0]
+def add_video(game,path,infor_pic):
+    vi = Video.objects.get_or_create(game_name=game,video_path=path,video_infor_pic_path=infor_pic)[0]
     vi.save()
     return vi
 

@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^like/$', views.like_review, name='like_review'),
     url(r'^dislike/$', views.dislike_review, name='dislike_review'),
     url(r'^news/$', views.news, name='news'),
+    url(r'^category/$', views.category, name='category'),
     
 ]
