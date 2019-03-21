@@ -26,6 +26,7 @@ class Game(models.Model):
     year_released = models.DateField(max_length=30)
     game_content = models.TextField(null = True,default="")
     slug = models.SlugField()
+    image = models.CharField(max_length=100)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name) 

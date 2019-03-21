@@ -31,7 +31,7 @@ function showSlides(n) {
 
 function autoShowSlides(){
   plusSlides(1);
-  setTimeout(autoShowSlides,3000);
+  setTimeout(autoShowSlides,5000);
 }
 
 

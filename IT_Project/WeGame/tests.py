@@ -51,6 +51,16 @@ class AboutPageTests(TestCase):
         self.assertTemplateUsed(response, 'wegame/about.html')
 
 
+class NewsPageTests(TestCase):
+
+    def test_news_page(self):
+        """
+        Check if the news page is functioning as intended
+        """
+        response = self.client.get(reverse('news'))
+        self.assertEqual(response.status_code,200)
+
+
 class StaticImageTests(TestCase):
     def test_static_files(self):
         """
@@ -59,29 +69,15 @@ class StaticImageTests(TestCase):
         foundImage = finders.find('game1.jpg')
         self.assertIsNotNone(foundImage)
 
-# class IndexPageTests(TestCase):
 
-#     def test_index_page(self):
-#        """
-#        Check if there is an index page and the template was used
-#        """
-#        response = self.client.get(reverse('index'))
-#        self.assertTemplateUsed(response, 'wegame/home.html')
-
-#     def test_bootstrap_css_in_base(self):
-#         response = self.client.get(reverse('index'))
-#         self.assertIn('<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">',
-#         response.content)
-
-# class SlugTest(TestCase):
+class SlugTest(TestCase):
     
-#     def test_slug(self):
-#         """
-#         check that slugs works correctly
-#         """
-#         pub = Publisher(name='test', country='USA')
-#         game = Game(category='tests',name='World of Warcraft',publisher_name= pub, year_released='2000', game_content="moreTest")
-#         game.save()
-#         self.assertEqual(game.slug, 'World-of-Warcraft')
+    def test_slug(self):
+        """
+        check that slugify works correctly
+        """
+        game = Game(category='tests',name='world of warcraft',year_released='2019-10-25', game_content="moreTest")
+        game.save()
+        self.assertEqual(game.slug, 'world-of-warcraft')
 
 
