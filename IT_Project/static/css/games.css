@@ -2,8 +2,17 @@
     padding-left: 15%;
     padding-right: 15%;
     padding-top:100px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
+.background-img{
+  z-index: -1;
+  opacity: 0.1;
+  top: 0;
+  height: 690px;
+  position: absolute;
+  left:0px;
+}
+
 * {
     box-sizing: border-box;
   }
@@ -93,6 +102,8 @@
   .column {
     display: inline-block;
     width: 20%;
+    height: 70px;
+    overflow-y: hidden;
   }
   
   /* Add a transparency effect for thumnbail images */
@@ -112,8 +123,12 @@
     width: 40%;
     /* background-color: #6f4b31; */
     color: #a53934;
+    font-size: 15px;
+}
+.infor-title{
 
 }
+
 .review-box{
   display: flex;
   padding-top: 40px;

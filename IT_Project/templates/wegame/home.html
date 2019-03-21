@@ -71,13 +71,13 @@
       </div>
       <!-- cards part -->
       <div class="story-cards">
-        <div class = "story-card dynamic-zoom-in story1">
+        <!-- <div class = "story-card dynamic-zoom-in story1">
           <a href="home.html">
           <button class="button" style="width:50%"><span>Hover </span></button>
         </a>
-        </div>
+        </div> -->
         {% for game in games %}
-        <a style="background:url(http://127.0.0.1:8000{{game.image}});" class = "story-card dynamic-zoom-in" href="/wegame/games/{{ game.slug }}"></a><div >
+        <a style="background:url(http://127.0.0.1:8000{{game.image}});" class = "story-card dynamic-zoom-in" href="/wegame/games/{{ game.slug }}" id="{{ game.slug }}"></a><div >
             
           </div></a>
         {% endfor %}

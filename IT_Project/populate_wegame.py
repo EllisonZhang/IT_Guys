@@ -27,6 +27,7 @@ def populate():
                 "Endnight Games Ltd":"China",
                 "ConcernedApe":"United States",
                 "Blizzard Entertainment":"United States",
+                "Ubisoft":"United States",
                 }
     
     pictures = [
@@ -94,18 +95,27 @@ def populate():
         {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic5.jpg"},
         {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic6.jpg"},
         {"game_name":"WORLD OF WARCRAFT","picture_path":"/media/game-pic/WOW-pic/pic7.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic1.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic2.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic3.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic4.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic5.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic6.jpg"},
+        {"game_name":"Assassin's Creed Origins","picture_path":"/media/game-pic/Assassin's-Creed-pic/pic7.jpg"},
+
     ]
 
     games = [
         {"category":"Survival","name":"ARK:Survival Invovled","publisher_name":"Studio WildCard","year_released":"2017-08-27","game_content":"good game", "image": "/static/home-pic/ARK.jpeg"},
-        {"category":"Cosplay","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game", "image": "/static/home-pic/stardew-valley.png"},
+        {"category":"RPG","name":"Stardew Valley","publisher_name":"ConcernedApe","year_released":"2016-02-16","game_content":"good game", "image": "/static/home-pic/stardew-valley.png"},
         {"category":"Indie","name":"The Binding of Isaac: Rebirth","publisher_name":"Nicalis, Inc.","year_released":"2014-11-04","game_content":"good game", "image": "/static/home-pic/the-binding-of-isaac.png"},
         {"category":"Survival","name":"Don't Starve Together","publisher_name":"Klei Entertainment","year_released":"2016-04-21","game_content":"good game", "image": "/static/home-pic/starve.jpeg"},
         {"category":"Simulation","name":"Euro Truck Simulator 2","publisher_name":"SCS Software","year_released":"2012-10-12","game_content":"good game", "image": "/static/home-pic/EU-truck.jpg"},
         {"category":"Survival","name":"The Forest","publisher_name":"Endnight Games Ltd","year_released":"2018-04-30","game_content":"good game", "image": "/static/home-pic/the-forest.jpg"},
-        {"category":"Cosplay","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game", "image": "/static/home-pic/overwatch.jpeg"},
-        {"category":"Cospaly","name":"WORLD OF WARCRAFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game", "image": "/static/home-pic/WoW.jpg"},
+        {"category":"RPG","name":"OVERWATCH","publisher_name":"Blizzard Entertainment","year_released":"1991-02-22","game_content":"good game", "image": "/static/home-pic/overwatch.jpeg"},
+        {"category":"RPG","name":"WORLD OF WARCRAFT","publisher_name":"Blizzard Entertainment","year_released":"1991-02-19","game_content":"good game", "image": "/static/home-pic/WoW.jpg"},
         {"category":"Card","name":"Hearthstone","publisher_name":"Blizzard Entertainment","year_released":"1991-02-05","game_content":"good game", "image": "/static/home-pic/Hearthstone.jpg"},
+        {"category":"RPG","name":"Assassin's Creed Origins","publisher_name":"Ubisoft","year_released":"2007-11-13","game_content":"good game", "image": "/static/home-pic/Assassin-Creed.jpeg"},
     ]
     
     videos = [
@@ -118,6 +128,7 @@ def populate():
         {"game_name":"OVERWATCH","video_path":"https://www.youtube.com/embed/fT-HvMPJvhA"},
         {"game_name":"WORLD OF WARCRAFT","video_path":"https://www.youtube.com/embed/qnkjIm8uEfE"},
         {"game_name":"Stardew Valley","video_path":"https://www.youtube.com/embed/dkYOLIirm5w"},
+        {"game_name":"Assassin's Creed Origins","video_path":"https://www.youtube.com/embed/cK4iAjzAoas"},
     ]
 
     reviews = [
@@ -130,6 +141,7 @@ def populate():
         {"game_name":"OVERWATCH","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"Easily one of the best multiplayer first person shooters. Vastly better than Team Fortress 2, which i used to play in the past."},
         {"game_name":"Stardew Valley","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"The charming RPG Stardew Valley is so much more than just another farming simulator and feels right at home on the Switch."},
         {"game_name":"WORLD OF WARCRAFT","username":"KevinKengne","number_likes":"2","number_dislikes":"3","text":"Battle of Azeroth isn’t as good as Legion was. But the Horde vs Alliance conflict is stronger than ever, and being part of this big conflict is pure fun. Veterans will enjoy HL content and how the lore is constantly used."},
+        {"game_name":"Assassin's Creed Origins","username":"Nelson","number_likes":"4","number_dislikes":"1","text":"Show off your extraordinary warrior abilities and shift the tides of battle during one of the deadliest conflicts of the time, the Peloponnesian War. Charge into epic clashes between Sparta and Athens in big battles pitting 150 vs. 150 soldiers against each other."},
         {"game_name":"ARK:Survival Invovled","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"The developers state that it is possible to obtain every available structure, item and enhancement without having to spend any money. Free gifts pop up every couple of hours that can be redeemed by watching ads."},
         {"game_name":"The Binding of Isaac: Rebirth","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"Crazier, funnier and bigger. Rebirth is a proper rebuilt of one of the most brilliant games we've enjoyed lately. There are a handful of new features and probably even more content than we could've asked for, even though die-hard fans might consider rebuying a game that's very much the same, but widely expanded."},
         {"game_name":"Don't Starve Together","username":"EdmundKuras","number_likes":"2","number_dislikes":"3","text":"Don't Starve Together does little to fix the original's glaring problems, but still, conquering the wilderness together with friends is a lot of fun."},
@@ -139,6 +151,7 @@ def populate():
         {"game_name":"OVERWATCH","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"A gaming experience that’s more polished and exciting than I have ever had the pleasure of experiencing and one I’ll be sure to continue to play for the foreseeable future. If not for the inclusion of microtransactions, this would have been a perfect game in my book."},
         {"game_name":"Stardew Valley","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"The charming RPG Stardew Valley is so much more than just another farming simulator and feels right at home on the Switch."},
         {"game_name":"WORLD OF WARCRAFT","username":"EllisonZhang","number_likes":"2","number_dislikes":"3","text":"Battle for Azeroth, despite the endless grind, has been an exciting expansion this far. However, raids and additional content are what makes the game great. Blizzard has made the entry level into the new expansion welcoming for new players and some die-hard critics have shared their concerns with the current direction Blizzard are going with making the gaming “easier.”"},
+        {"game_name":"Assassin's Creed Origins","username":"EllisonZhang","number_likes":"3","number_dislikes":"2","text":"Discover a world rich with myths and legends. From ancient rituals to famed statues, come face to face with Greece's legendary figures and discover the true nature of its most daunting mythological beasts."},
     ]
 
     users = [
