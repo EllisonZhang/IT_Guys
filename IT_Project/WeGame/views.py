@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Game, Review, Picture, Video
 from django.urls import reverse_lazy
 from newsapi import NewsApiClient
@@ -17,7 +18,7 @@ class GameDetailView(DetailView):
         return context
     
 
-class ReviewCreateView(CreateView):
+class ReviewCreateView(LoginRequiredMixin, CreateView):
     model = Review
     template_name = 'review_new.html'
     fields = ['game_reviewed', 'comment_text']
@@ -50,9 +51,10 @@ class ReviewDeleteView(DeleteView):
 def index(request):
     newsapi = NewsApiClient(api_key='7184697691164311aaca455ed36c0b68')
     top_headlines = newsapi.get_top_headlines(sources='ign')
-    
+    games = Game.objects.all()
     return render(request, 'wegame/home.html', {
-        'articles':top_headlines['articles']
+        'articles':top_headlines['articles'], 
+        'games': games
     })
 
 def about(request):

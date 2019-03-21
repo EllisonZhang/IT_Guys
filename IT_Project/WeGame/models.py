@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.template.defaultfilters import slugify
 
 class Review(models.Model):
     number_likes = models.IntegerField(default = 0)
@@ -18,6 +18,12 @@ class Game(models.Model):
     publisher_name = models.ForeignKey('Publisher', on_delete=models.SET_NULL, null=True)
     year_released = models.DateField(max_length=30)
     game_content = models.TextField(null = True,default="")
+    slug = models.SlugField()
+    image = models.CharField(max_length=100)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name) 
+        super(Game, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
@@ -43,12 +49,3 @@ class Publisher(models.Model):
 
     def __str__(self):
         return self.name
-
-class News(models.Model):
-    news_title = models.CharField(max_length=100)
-    news_content = models.TextField(null = True,default="")
-    news_data = models.DateField(max_length=30)
-    editor_name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.news_title
