@@ -5,6 +5,7 @@ from .models import Game, Review, Picture, Video
 from django.urls import reverse_lazy
 from newsapi import NewsApiClient
 from django.http import HttpResponse
+import requests 
 
 class GameDetailView(DetailView):
     model = Game
