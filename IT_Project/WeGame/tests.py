@@ -1,37 +1,12 @@
 from django.test import TestCase
 from WeGame.models import Review
 from WeGame.models import Game
+from WeGame.models import Video
 from WeGame.models import Publisher
 from accounts.models import CustomUser
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
 from django.template import loader
-
-class ReviewMethodTests(TestCase):
-    def test_ensure_likes_are_positive(self):
-        """
-        ensure_likes_are_positive should results True for reviews
-        where likes are zero or positive
-        """
-        pub = Publisher(name='test', country='USA')
-        gam = Game(category='testy',name='testname',publisher_name= pub, year_released='2000', game_content="moreTest")
-        userCustom = CustomUser(age='24')
-        rev = Review(number_likes=-1,number_dislikes=0,comment_text="test",creation_date=2019-10-25, game_reviewed= gam, user= userCustom)
-        self.assertEqual((rev.number_likes >=0), True)
-        
-
-
-    def test_ensure_dislikes_are_positive(self):
-        """
-        ensure_dislikes_are_positive should results True for reviews
-        where dislikes are zero or positive
-        """
-        pub = Publisher(name='test', country='USA')
-        gam = Game(category='testy',name='testname',publisher_name= pub, year_released='2000', game_content="moreTest")
-        userCustom = CustomUser(age='24')
-        rev = Review(number_likes=0,number_dislikes=-1,comment_text="test",creation_date=2019-10-25, game_reviewed= gam, user= userCustom)
-        self.assertEqual((rev.number_dislikes >=0), True)
-
 
 class AboutPageTests(TestCase):
 
@@ -80,4 +55,45 @@ class SlugTest(TestCase):
         game.save()
         self.assertEqual(game.slug, 'world-of-warcraft')
 
+class VideoModelTest(TestCase):
 
+    def test_str_is_equal_to_name(self):
+        """
+        Method '_str_' should be equal to the field game_name
+        """
+        pub = Publisher(name='test', country='USA')
+        gam = Game(category='testy',name='testname',publisher_name= pub, year_released='2000', game_content="moreTest")
+        gname = Video(game_name =gam)
+        self.assertEqual(str(gname), 'testname')
+
+    def test_length_of_video_path(self):
+        """
+        Method to see if pthat length of video path limited to a 100
+        """
+        pub = Publisher(name='test', country='USA')
+        gam = Game(category='testy',name='testname',publisher_name= pub, year_released='2000', game_content="moreTest")
+        vid = Video(game_name = gam,video_path = 'abcdahHSAFOHDÓFIHDHGDLFHGdlkDLFKHGDLHFGDLHGfdlkhfgdlhfgdfgdifgdfgfgsd;fkdjglksdglkhfdglHKFGldhghgasa')
+        self.assertEqual((len(vid.video_path) <= 100), True)
+
+
+class IndexPageTests(TestCase):
+
+    def test_news_page(self):
+        """
+        Check if the index page is functioning as intended
+        """
+        response = self.client.get(reverse('index'))
+        self.assertEqual(response.status_code,200)
+
+class DatabaseTest(TestCase):
+
+    def test_create_new_publisher(self):
+        """
+        Check if accurate number of Publishers within the Database
+        """
+        publ = Publisher(name='Sony', country='Korea')
+        publ.save()
+        publisher_data = Publisher.objects.all()
+        self.assertEquals(len(publisher_data),1)
+        sole = publisher_data[0]
+        self.assertAlmostEquals(sole, publ)
