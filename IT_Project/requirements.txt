@@ -11,10 +11,12 @@ oauthlib==3.0.1
 Pillow==5.4.1
 pycparser==2.19
 PyJWT==1.7.1
+python-social-auth==0.3.6
 python3-openid==3.1.0
 pytz==2018.9
 requests==2.17.1
 requests-oauthlib==1.2.0
 six==1.12.0
+social-auth-app-django==3.1.0
 social-auth-core==3.1.0
 urllib3==1.21.1
