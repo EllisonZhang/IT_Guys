@@ -45,6 +45,7 @@ class Picture(models.Model):
 class Video(models.Model):
     game_name = models.ForeignKey('Game', on_delete=models.SET_NULL, null=True)
     video_path = models.CharField(max_length=100)
+    video_infor_pic_path = models.CharField(max_length=100)
 
     def __str__(self):
         return self.game_name.name

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>{% block title %}We Game{% endblock %}</title>
-    {% block meta %}{% endblock %}
+    {% block meta %}
+    {% endblock %}
+
     {%block head_block%}
   
    
@@ -39,27 +41,27 @@
           <!-- </a> -->
           <!-- logo -->
           <div class="logo">
-              <a class="nav-bar-item" href="home.html">
+              <a class="nav-bar-item" href="{% url 'index' %}">
               </a>
           </div>
 
           <div class="nav-bar-items">
-            <a class="nav-bar-item" href="/wegame/">
+            <a class="nav-bar-item" href="{% url 'index' %}">
               <div class="nav-bar-label">WeGame</div>
             </a>
-            <a class="nav-bar-item" href="/wegame/news">
+            <a class="nav-bar-item" href="{% url 'news' %}">
               <div class="nav-bar-label">News</div>
             </a>
-            <a class="nav-bar-item" href="/wegame/about/">
+            <a class="nav-bar-item" href="{% url 'about' %}">
               <div class="nav-bar-label">About</div>
             </a>
           </div>
 
           <div class="nav-bar-account">
-              <div class="container">
+              <!-- <div class="container">
                     <input type="text" placeholder="Search.." name="search">
                     <div class="search"></div>
-              </div>
+              </div> -->
               <a class="nav-bar-item" href="https://twitter.com/WeGame15">
                 <div class="nav-bar-label">Support</div>
               </a>
@@ -92,7 +94,7 @@
           <div class="bottom-bar-label">SUPPORT</div>
         </a>
         <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="/wegame/about/">
+        <a class="bottom-bar-item" href="{% url 'about' %}">
           <div class="bottom-bar-label">ABOUT</div>
         </a>
         <p class="bottom-bar-label">|</p>
@@ -100,7 +102,7 @@
           <div class="bottom-bar-label">CONTACT US</div>
         </a>
         <p class="bottom-bar-label">|</p>
-        <a class="bottom-bar-item" href="/wegame/news">
+        <a class="bottom-bar-item" href="{% url 'news' %}">
           <div class="bottom-bar-label">NEWS</div>
         </a>
       <div class="test">
