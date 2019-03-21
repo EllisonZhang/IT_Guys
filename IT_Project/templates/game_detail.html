@@ -110,11 +110,11 @@
               <span>{{ review.comment_text }}</span>
             </div>
             <div class = "like-dislike" >
-              <a href = "#"> 
-                  <i class="fas fa-thumbs-up"> {{ review.number_likes }}</i>
+              <a> 
+                  <span class="likez"  data-reviewid="{{ review.id }}"><i class="fas fa-thumbs-up" class="like_count" id="l{{ review.id}}"> {{ review.number_likes }}</i></span>
               </a>
-              <a class ="dislike" href = "#"> 
-                  <i class="fas fa-thumbs-down"> {{ review.number_dislikes }}</i>
+              <a class ="dislike" > 
+                <span class="dislikez"data-reviewid="{{ review.id }}"><i class="fas fa-thumbs-down" class="dislike_count" id="d{{ review.id}}"> {{ review.number_dislikes }}</i></span>
               </a>
               
             </div>
@@ -134,12 +134,43 @@
 
 {%block script_block%}
 <script src="/static/js/slideInGames.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   var elements = document.getElementsByClassName('used_images');
   imageUsed = elements[0]
   document.getElementById("game_image").src = imageUsed.src;
+  $('.likez').click(function () {
+    var reviewid;
+    reviewid = $(this).attr("data-reviewid");
+    var beginnindId = "l";
+    var endId = reviewid.toString();
+    var id = beginnindId.concat(endId);
+    document.getElementById(id).style.display = "none";
+    $.get('/wegame/like/', { review_id: reviewid}, function(data) {
+      console.log(data)
+      
+      
+      
+        
+    })
+    
+  })
+  $('.dislikez').click(function () {
+    var reviewid;
+    reviewid = $(this).attr("data-reviewid");
+    var beginnindId = "d";
+    var endId = reviewid.toString();
+    var id = beginnindId.concat(endId);
+    $.get('/wegame/dislike/', { review_id: reviewid}, function(data) {
+      console.log(data)
+      
+      
+      
+    })
+    document.getElementById(id).style.display = "none";
+  })
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 {%endblock%}
 
 
