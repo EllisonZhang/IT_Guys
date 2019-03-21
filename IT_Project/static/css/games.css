@@ -31,6 +31,9 @@
   /* Hide the images by default */
   .mySlides {
     display: none;
+    height: 340px;
+    margin-bottom: 5px;
+    overflow: hidden;
   }
   .mySlides iframe{
     width: 100%;
@@ -188,7 +191,15 @@ span {
   color: #c6d4df;
 }
 .description-container{
-
+  margin-top: 10px;
+  height: 80px;
+  overflow: hidden;
+}
+.description-content{
+  line-height: 1;
+}
+.date-container{
+  margin-top: 10px;
 }
 
 .reviews-container {

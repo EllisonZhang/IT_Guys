@@ -5,6 +5,7 @@ from WeGame.models import Publisher
 from accounts.models import CustomUser
 from django.core.urlresolvers import reverse
 from django.contrib.staticfiles import finders
+from django.template import loader
 
 class ReviewMethodTests(TestCase):
     def test_ensure_likes_are_positive(self):
@@ -17,6 +18,7 @@ class ReviewMethodTests(TestCase):
         userCustom = CustomUser(age='24')
         rev = Review(number_likes=-1,number_dislikes=0,comment_text="test",creation_date=2019-10-25, game_reviewed= gam, user= userCustom)
         self.assertEqual((rev.number_likes >=0), True)
+        
 
 
     def test_ensure_dislikes_are_positive(self):
@@ -49,6 +51,16 @@ class AboutPageTests(TestCase):
         self.assertTemplateUsed(response, 'wegame/about.html')
 
 
+class NewsPageTests(TestCase):
+
+    def test_news_page(self):
+        """
+        Check if the news page is functioning as intended
+        """
+        response = self.client.get(reverse('news'))
+        self.assertEqual(response.status_code,200)
+
+
 class StaticImageTests(TestCase):
     def test_static_files(self):
         """
@@ -56,3 +68,16 @@ class StaticImageTests(TestCase):
         """
         foundImage = finders.find('game1.jpg')
         self.assertIsNotNone(foundImage)
+
+
+class SlugTest(TestCase):
+    
+    def test_slug(self):
+        """
+        check that slugify works correctly
+        """
+        game = Game(category='tests',name='world of warcraft',year_released='2019-10-25', game_content="moreTest")
+        game.save()
+        self.assertEqual(game.slug, 'world-of-warcraft')
+
+
