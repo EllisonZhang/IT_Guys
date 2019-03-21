@@ -4,6 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Game, Review, Picture, Video
 from django.urls import reverse_lazy
 from newsapi import NewsApiClient
+from django.http import HttpResponse
 
 class GameDetailView(DetailView):
     model = Game
@@ -56,6 +57,25 @@ def index(request):
         'articles':top_headlines['articles'], 
         'games': games
     })
+
+def like_review(request):
+    review_id = None
+    if request.method == 'GET':
+        review_id = request.GET['review_id']
+    review = Review.objects.get(id=int(review_id))
+    likes = review.number_likes + 1
+    review.number_likes = likes
+    review.save()
+    return HttpResponse(likes)
+
+def dislike_review(request):
+    if request.method == 'GET':
+        review_id = request.GET['review_id']
+    review = Review.objects.get(id=int(review_id))
+    dislikes = review.number_dislikes + 1
+    review.number_dislikes = dislikes
+    review.save()
+    return HttpResponse(dislikes)
 
 def about(request):
     response = render(request, 'wegame/about.html')

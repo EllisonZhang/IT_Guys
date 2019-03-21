@@ -10,6 +10,8 @@ urlpatterns = [
     url(r'^games/reviews/(?P<pk>\d+)/edit/$', views.ReviewUpdateView.as_view(), name='review_edit'),
     url(r'^games/reviews/(?P<pk>\d+)/delete/$', views.ReviewDeleteView.as_view(), name='review_delete'),
     url(r'^about/$', views.about, name='about'),
+    url(r'^like/$', views.like_review, name='like_review'),
+    url(r'^dislike/$', views.dislike_review, name='dislike_review'),
     url(r'^news/$', views.news, name='news'),
     
 ]
