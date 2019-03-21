@@ -77,7 +77,7 @@
         </a>
         </div>
         {% for game in games %}
-        <a style="background:url(http://127.0.0.1:8000{{game.image}});" class = "story-card dynamic-zoom-in" href="/wegame/games/{{ game.slug }}"></a><div >
+        <a style="background:url(http://127.0.0.1:8000{{game.image}});" class = "story-card dynamic-zoom-in" href="/wegame/games/{{ game.slug }}" id="{{ game.slug }}"></a><div >
             
           </div></a>
         {% endfor %}
