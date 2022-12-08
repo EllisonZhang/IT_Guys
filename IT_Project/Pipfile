@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-certifi = "==2018.11.29"
+certifi = "==2022.12.7"
 django-registration-redux = "==1.4"
 pytz = "==2018.9"
 Django = "==1.11.17"
